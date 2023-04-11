@@ -1,3 +1,5 @@
+![Bare Bones XS - UI Kit for Decent Sampler](/Bare_Bones_XS.dsbundle/UI/Bare_Bones_XS.png)
+
 # Bare Bones XS
 
 **Bare Bones XS** is a basic UI kit for creating *Decent Sampler* virtual instruments. It enables anyone to quickly and easily create a fully-functional virtual instrument using only one sound sample and a text editor.
@@ -6,20 +8,31 @@
 
  - Four (4) virtual instrument templates
  - One (1) graphic knob
- - Two (2) graphic LED switches
+ - Two (2) sets of graphic LED on/off switches
  - Three (3) generic console backgrounds: Sonic Silver, Gold Fusion and Alien Armpit
- - Support for two (2) sound Groups with A/B mix control
- - Support for two (2) additional sound layers
- - Up to three (3) velocity ranges
- - Up to five (5) round-robins
+ - Support for two (2) primary sound Groups with A/B mix control
+ - Support for two (2) secondary sound Groups
+ - Up to three (3) zones for velocity layers
+ - Up to five (5) round-robins for sound variations
  - Convolution reverb with 10 impulse response (IR) presets
  - High- and low-pass filters with adjustable cutoff frequencies
  - MIDI support for CC1
  
- ## Installation
  
- 1. Download
- 2. Install
+ ## Compatibility
+
+Bare Bones XS is compatible with Decent Sampler 1.7.0 and above.
+
+
+## Installation
+ 
+1. Download the **Bare Bones XS** software package:
+
+   [https://github.com/sourc3array/Bare_Bones_XS](https://github.com/sourc3array/Bare_Bones_XS)
+
+2. Extract the ZIP file archive and move the 'Bare_Bones_XS.dspreset' folder into your instruments folder for Decent Sampler.
+
+3. Load the **Bare Bones XS** instrument using the file browser in the Decent Sampler plug-in or standalone player and choose an instrument preset.
  
  ## License
 
@@ -29,5 +42,5 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
  
  ## References
  
- 1. Decent Sampler
+ 1. [Decent Sampler](https://www.decentsamples.com/product/decent-sampler-plugin/): A FREE sampling plugin and stand-alone player for Windows, MAC and Linux that plays samples in the Decent Sampler format.
  
