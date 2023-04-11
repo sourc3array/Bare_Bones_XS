@@ -1,8 +1,12 @@
-![Bare Bones XS - UI Kit for Decent Sampler](/Bare_Bones_XS.dsbundle/UI/Bare_Bones_XS.png)
-
 # Bare Bones XS
 
+![example workflow](https://github.com/sourc3array/Bare_Bones_XS/actions/workflows/basic_workflow.yml/badge.svg)
+
 **Bare Bones XS** is a basic UI kit for creating *Decent Sampler* virtual instruments. It enables anyone to quickly and easily create a fully-functional virtual instrument using only one sound sample and a text editor.
+
+
+![Bare Bones XS - UI Kit for Decent Sampler](/Bare_Bones_XS.dsbundle/UI/Bare_Bones_XS.png)
+
 
 ## Features
 
