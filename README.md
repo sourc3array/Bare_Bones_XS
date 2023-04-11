@@ -30,7 +30,7 @@ Bare Bones XS is compatible with Decent Sampler 1.7.0 and above.
 
    [https://github.com/sourc3array/Bare_Bones_XS](https://github.com/sourc3array/Bare_Bones_XS)
 
-2. Extract the ZIP file archive and move the 'Bare_Bones_XS.dspreset' folder into your instruments folder for Decent Sampler.
+2. Extract the ZIP file archive and move the 'Bare_Bones_XS.dsbundle' folder into your instruments folder for Decent Sampler.
 
 3. Load the **Bare Bones XS** instrument using the file browser in the Decent Sampler plug-in or standalone player and choose an instrument preset.
  
