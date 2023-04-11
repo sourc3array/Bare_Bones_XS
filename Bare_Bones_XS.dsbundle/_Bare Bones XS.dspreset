@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DecentSampler minVersion="1.0.0">
+
+    <ui width="812" height="375" bgImage="UI/Bare_Bones_XS.png" bgColor="#F2E3D5" layoutMode="relative" bgMode="top_left">
+
+        <tab name="main">
+            
+            <!-- UI 00 :: LABEL > Switch A -->
+            
+            <label x="482" y="50" width="72" height="72" text="FX" textSize="16" textColor="FF333333" />
+        
+            <!-- UI 01 :: Switch A > Glitch FX ON/OFF -->
+            
+            <button x="482" y="82" width="72" height="72" style="image" value="0">
+                <state name="GLITCH_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
+                    <binding type="general" level="group" position="2" parameter="ENABLED" translation="fixed_value" translationValue="false" />
+                    <binding type="general" level="group" position="3" parameter="ENABLED" translation="fixed_value" translationValue="false" />
+                </state>
+                <state name="GLITCH_ON" mainImage="UI/Buttons/Toggle_LED_ON_Alien_Armpit.png">
+                    <binding type="general" level="group" position="2" parameter="ENABLED" translation="fixed_value" translationValue="true" />
+                    <binding type="general" level="group" position="3" parameter="ENABLED" translation="fixed_value" translationValue="true" />
+                </state>
+            </button>
+            
+            <!-- UI 02 :: Knob A > GLITCH VOL -->
+      
+            <control x="449" y="96" width="48" height="48" 
+            parameterName="GLITCH_VOL" type="float" minValue="0.1" maxValue="1" value="0.25"
+            style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
+                <binding type="amp" level="group" position="2" parameter="AMP_VOLUME" translation="linear" />
+                <binding type="amp" level="group" position="3" parameter="AMP_VOLUME" translation="linear" />
+            </control>
+            
+            <!-- UI 03 :: LABEL > SUSTAIN KNOB -->
+            
+            <label x="542" y="50" width="72" height="72" text="SUS" textSize="16" textColor="FF333333" />
+
+            <!-- UI 04 :: Knob B > SUSTAIN VOL -->
+      
+            <control x="583" y="32" width="72" height="72" 
+            parameterName="SUSTAIN_VOL" type="float" minValue="0" maxValue="1" value="0.25"
+            style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
+                <binding type="amp" level="group" position="1" parameter="AMP_VOLUME" translation="linear" />
+            </control>
+
+        </tab>
+      
+        <keyboard>
+            <color loNote="72" hiNote="83" color="F2E3D5" />  <!-- Note C4 -->
+            <color loNote="84" hiNote="84" color="3C3D40" />  <!-- Note C5 -->
+            <color loNote="85" hiNote="108" color="F2E3D5" /> <!-- Note C7 -->
+        </keyboard>
+
+    </ui>
+
+    <groups attack="0.01" decay="25" sustain="0.52" release="0.05">
+
+        <!-- GROUP 00 :: CLEAN SAMPLE -->
+
+        <group ampVelTrack="0.92">
+        
+            <!-- RAW SAMPLES :: KEY C5 -->
+            
+                <!-- KEY C5 :: ZONE 01 -->
+
+                    <sample loNote="72" rootNote="84" hiNote="108" loVel="0" hivel="63"
+                    path="Samples/GEN_Synth_Bass_C5_S0.wav" />
+                            
+                <!-- KEY C5 :: ZONE 02 -->
+
+                    <sample loNote="72" rootNote="84" hiNote="108" loVel="64" hivel="94"
+                    path="Samples/GEN_Synth_Bass_C5_S1.wav" />
+                            
+                <!-- KEY C5 :: ZONE 03 -->
+            
+                    <sample loNote="72" rootNote="84" hiNote="108" loVel="95" hivel="127"
+                    path="Samples/GEN_Synth_Bass_C5_S2.wav" />
+                            
+                <!-- KEY C5 :: End of ZONES -->
+                
+            <!-- CLEAN SAMPLES :: End of KEY C5 -->
+
+        </group>
+        
+        <!-- GROUP 01 :: SUSTAINED SAMPLE -->
+
+        <group ampVelTrack="0.92" attack=".05" release="2.00">
+        
+            <!-- RAW SAMPLES :: KEY C5 -->
+            
+                <!-- KEY C5 :: ZONE 01 -->
+
+                    <sample loNote="72" rootNote="84" hiNote="108" loVel="0" hivel="63"
+                    path="Samples/GEN_Synth_Bass_C5_SUS_S0.wav" />
+                            
+                <!-- KEY C5 :: ZONE 02 -->
+
+                    <sample loNote="72" rootNote="84" hiNote="108" loVel="64" hivel="94"
+                    path="Samples/GEN_Synth_Bass_C5_SUS_S1.wav" />
+                            
+                <!-- KEY C5 :: ZONE 03 -->
+            
+                    <sample loNote="72" rootNote="84" hiNote="108" loVel="95" hivel="127"
+                    path="Samples/GEN_Synth_Bass_C5_SUS_S2.wav" />
+                            
+                <!-- KEY C5 :: End of ZONES -->
+                
+            <!-- CLEAN SAMPLES :: End of KEY C5 -->
+
+        </group>
+        
+        <!-- GROUP 02 :: GLITCH SAMPLES -->
+        
+        <group ampVelTrack="0.92" attack=".10" release="1.00" loCC1="0" hiCC1="63" tags="GLITCH">
+        
+            <!-- GLITCH SAMPLES :: KEY C5 -->
+            
+                <!-- KEY C5 :: ROUND ROBINS -->
+
+                <sample loNote="72" rootNote="84" hiNote="108"
+                seqMode="random" seqLength="4" seqPosition="1"
+                path="Samples/GEN_Synth_Bass_C5_Glitch_V1.wav" />
+                    
+                <sample loNote="72" rootNote="84" hiNote="108"
+                seqMode="random" seqLength="4" seqPosition="2"
+                path="Samples/GEN_Synth_Bass_C5_Glitch_V2.wav" />
+                    
+                <sample loNote="72" rootNote="84" hiNote="108"
+                seqMode="random" seqLength="4" seqPosition="3"
+                path="Samples/GEN_Synth_Bass_C5_Glitch_V3.wav" />
+                
+            <!-- GLITCH SAMPLES :: End of KEY C5 -->
+
+        </group>
+        
+        <!-- GROUP 03 :: SUSTAINED GLITCH SAMPLES -->
+        
+        <group ampVelTrack="0.92" attack=".20" release="2.00" loCC1="64" hiCC1="127" tags="SUS_GLITCH">
+        
+            <!-- GLITCH SAMPLES :: KEY C5 -->
+            
+                <!-- KEY C5 :: ROUND ROBINS -->
+
+                <sample loNote="72" rootNote="84" hiNote="108"
+                seqMode="true_random" seqLength="6" seqPosition="1"
+                path="Samples/GEN_Synth_Bass_C5_SUS_Glitch_V1.wav" />
+                    
+                <sample loNote="72" rootNote="84" hiNote="108"
+                seqMode="true_random" seqLength="6" seqPosition="2"
+                path="Samples/GEN_Synth_Bass_C5_SUS_Glitch_V2.wav" />
+                    
+                <sample loNote="72" rootNote="84" hiNote="108"
+                seqMode="true_random" seqLength="6" seqPosition="3"
+                path="Samples/GEN_Synth_Bass_C5_SUS_Glitch_V3.wav" />
+                
+                <sample loNote="72" rootNote="84" hiNote="108"
+                seqMode="true_random" seqLength="6" seqPosition="4"
+                path="Samples/GEN_Synth_Bass_C5_SUS_Glitch_V4.wav" />
+                
+                <sample loNote="72" rootNote="84" hiNote="108"
+                seqMode="true_random" seqLength="6" seqPosition="5"
+                path="Samples/GEN_Synth_Bass_C5_SUS_Glitch_V5.wav" />
+                
+            <!-- GLITCH SAMPLES :: End of KEY C5 -->
+
+        </group>
+
+    </groups>
+    
+    <effects>
+    
+        <!-- EFFECT 00 :: Hi-Pass Filter -->
+        <effect type="highpass" resonance="0.5" frequency="30.0" />
+        
+        <!-- EFFECT 01 :: Low-Pass Filter -->
+        <effect type="lowpass" resonance="0.3" frequency="18000" />
+    
+    </effects>
+    
+    <midi>
+
+        <!-- Map MIDI CC 1 to Control 04 (Sustain Knob) -->
+        <cc number="1">
+            <binding level="ui" type="control" parameter="VALUE" position="4" 
+            translation="linear" translationOutputMin="0" translationOutputMax="1" />
+        </cc>
+
+    </midi>
+    
+    <tags>
+    
+        <tag name="GLITCH" polyphony="3" />    
+        <tag name="SUS_GLITCH" polyphony="3" />
+    
+    </tags>
+
+</DecentSampler>

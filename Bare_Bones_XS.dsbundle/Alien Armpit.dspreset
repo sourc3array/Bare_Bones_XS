@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DecentSampler minVersion="1.0.0">
+
+    <ui width="812" height="375" bgImage="UI/Panels/Panel_Alien_Armpit.png" bgColor="#F2E3D5" layoutMode="relative" bgMode="top_left">
+
+        <tab name="main">
+            
+            <!-- UI 00 :: LABEL > GLITCH -->
+            
+            <label x="135" y="129" width="72" height="36" text="GLITCH" textSize="15" textColor="FF333333" />
+        
+            <!-- UI 01 :: Switch A > Glitch FX ON/OFF -->
+            
+            <button x="88" y="109" width="72" height="72" style="image" value="0">
+                <state name="GLITCH_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
+                    <binding type="general" level="group" position="2" parameter="ENABLED" translation="fixed_value" translationValue="false" />
+                </state>
+                <state name="GLITCH_ON" mainImage="UI/Buttons/Toggle_LED_ON_Heat_Wave.png">
+                    <binding type="general" level="group" position="2" parameter="ENABLED" translation="fixed_value" translationValue="true" />
+                </state>
+            </button>
+            
+            <!-- UI 02 :: Knob A > GLITCH VOL -->
+      
+            <control x="135" y="71" width="72" height="72" 
+            parameterName="GLITCH_VOL" type="float" minValue="0.1" maxValue="1" value="0.5"
+            style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
+                <binding type="amp" level="group" position="2" parameter="AMP_VOLUME" translation="linear" />
+            </control>
+            
+            <!-- UI 03 :: LABEL > SUSTAIN KNOB -->
+            
+            <label x="370" y="165" width="72" height="36" text="SUSTAIN" textSize="15" textColor="FF333333" />
+
+            <!-- UI 04 :: Knob B > SUSTAIN VOL -->
+      
+            <control x="370" y="107" width="72" height="72" 
+            parameterName="SUSTAIN_VOL" type="float" minValue="0" maxValue="1" value="0.5"
+            style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
+                <binding type="amp" level="group" position="1" parameter="AMP_VOLUME" translation="linear" />
+                <binding type="amp" level="group" position="0" parameter="AMP_VOLUME" translation="linear" translationReversed="true" />
+            </control>
+            
+            <!-- UI 05 :: LABEL > Reverb Knob -->
+            
+            <label x="540" y="129" width="72" height="36" text="REVERB" textSize="15" textColor="FF333333" />
+
+            <!-- UI 06 :: REVERB KNOB > FX Mix -->
+      
+            <control x="540" y="71" width="72" height="72" 
+            parameterName="DELAY_MIX" type="float" minValue="0" maxValue="1" value="0.3"
+            style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
+                <binding type="effect" level="instrument" position="2" parameter="FX_MIX" translation="linear" />
+            </control>
+            
+            <!-- UI 07 :: MENU A > REVERB IRs -->
+            
+            <menu x="619" y="89"  width="94" height="36" value="1">
+
+                <option name="Small A">
+                    <binding type="effect" level="instrument" position="2" parameter="FX_IR_FILE" translation="fixed_value" translationValue="IRs/414185_microVerb_SM_01.wav" />
+                </option>
+                
+                <option name="Small B">
+                    <binding type="effect" level="instrument" position="2" parameter="FX_IR_FILE" translation="fixed_value" translationValue="IRs/414184_microVerb_SM_02.wav" />
+                </option>
+                
+                <option name="Large A">
+                    <binding type="effect" level="instrument" position="2" parameter="FX_IR_FILE" translation="fixed_value" translationValue="IRs/414181_microVerb_LG_03.wav" />
+                </option>
+                
+                <option name="Large B">
+                    <binding type="effect" level="instrument" position="2" parameter="FX_IR_FILE" translation="fixed_value" translationValue="IRs/414183_microVerb_LG_07.wav" />
+                </option>
+
+                <option name="Spring A">
+                    <binding type="effect" level="instrument" position="2" parameter="FX_IR_FILE" translation="fixed_value" translationValue="IRs/530378_60s_Spring.wav" />
+                </option>
+                
+                <option name="Spring B">
+                    <binding type="effect" level="instrument" position="2" parameter="FX_IR_FILE" translation="fixed_value" translationValue="IRs/516502_Warm_Spring.wav" />
+                </option>
+                
+                <option name="Box Spring">
+                    <binding type="effect" level="instrument" position="2" parameter="FX_IR_FILE" translation="fixed_value" translationValue="IRs/175300_Box_Spring_02.wav" />
+                </option>
+                
+                <option name="Tunnel">
+                    <binding type="effect" level="instrument" position="2" parameter="FX_IR_FILE" translation="fixed_value" translationValue="IRs/175360_Concrete_Tunnel_01.wav" />
+                </option>
+                
+                <option name="Reverse">
+                    <binding type="effect" level="instrument" position="2" parameter="FX_IR_FILE" translation="fixed_value" translationValue="IRs/414182_microVerb_REV.wav" />
+                </option>
+                
+                <option name="Nonlinear">
+                    <binding type="effect" level="instrument" position="2" parameter="FX_IR_FILE" translation="fixed_value" translationValue="IRs/527308_RMX16_Nonlinear.wav" />
+                </option>
+                
+            </menu>
+            
+            <!-- UI 08 :: LABEL > Hi-Pass Filter -->
+            
+            <label x="302" y="56" width="36" height="36" text="HI" textSize="15" textColor="FF333333" />
+            
+            <!-- UI 09 :: HI-PASS KNOB > Filter Freq -->
+      
+            <control x="328" y="56" width="36" height="36" 
+            parameterName="DELAY_MIX" type="float" minValue="0" maxValue="1" value="0.1"
+            style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
+                <binding type="effect" level="instrument" position="0" parameter="FX_FILTER_FREQUENCY"
+                 translation="linear" translationOutputMin="15" translationOutputMax="450" />
+            </control>
+            
+            <!-- UI 10 :: LABEL > Low-Pass Filter -->
+            
+            <label x="474" y="56" width="36" height="36" text="LO" textSize="15" textColor="FF333333" />
+            
+            <!-- UI 11 :: LOW-PASS KNOB > Filter Freq -->
+      
+            <control x="448" y="56" width="36" height="36" 
+            parameterName="DELAY_MIX" type="float" minValue="0" maxValue="1" value="0.9"
+            style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
+                <binding type="effect" level="instrument" position="1" parameter="FX_FILTER_FREQUENCY"
+                 translation="linear" translationOutputMin="450" translationOutputMax="15000" />
+            </control>
+            
+            <!-- UI 12 :: LABEL > Tone Knob -->
+            
+            <label x="383" y="68" width="48" height="36" text="MID" textSize="15" textColor="FF333333" />
+            
+            <!-- UI 13 :: TONE KNOB > Mid Gain -->
+      
+            <control x="383" y="32" width="48" height="48" 
+            parameterName="DELAY_MIX" type="float" minValue="0" maxValue="1" value="0.5"
+            style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
+                <binding type="effect" level="instrument" position="1" parameter="FREQ" translation="linear" />
+            </control>
+
+        </tab>
+      
+        <keyboard>
+            <color loNote="72" hiNote="83" color="F2E3D5" />  <!-- Note C4 -->
+            <color loNote="84" hiNote="84" color="3C3D40" />  <!-- Note C5 -->
+            <color loNote="85" hiNote="108" color="F2E3D5" /> <!-- Note C7 -->
+        </keyboard>
+
+    </ui>
+
+    <groups attack="0.01" decay="25" sustain="0.52" release="0.05">
+
+        <!-- GROUP 00 :: BASIC SAMPLE -->
+
+        <group ampVelTrack="0.92">
+        
+            <!-- BASIC SAMPLES :: KEY C5 -->
+            
+                <!-- KEY C5 :: ZONE 01 -->
+
+                    <sample loNote="72" rootNote="84" hiNote="108" loVel="0" hivel="63"
+                    path="Samples/GEN_Synth_Bass_C5_S0.wav" />
+                            
+                <!-- KEY C5 :: ZONE 02 -->
+
+                    <sample loNote="72" rootNote="84" hiNote="108" loVel="64" hivel="94"
+                    path="Samples/GEN_Synth_Bass_C5_S1.wav" />
+                            
+                <!-- KEY C5 :: ZONE 03 -->
+            
+                    <sample loNote="72" rootNote="84" hiNote="108" loVel="95" hivel="127"
+                    path="Samples/GEN_Synth_Bass_C5_S2.wav" />
+                            
+                <!-- KEY C5 :: End of ZONES -->
+                
+            <!-- CLEAN SAMPLES :: End of KEY C5 -->
+
+        </group>
+        
+        <!-- GROUP 01 :: SUSTAINED SAMPLE -->
+
+        <group ampVelTrack="0.92" attack=".05" release="2.00">
+        
+            <!-- RAW SAMPLES :: KEY C5 -->
+            
+                <!-- KEY C5 :: ZONE 01 -->
+
+                    <sample loNote="72" rootNote="84" hiNote="108" loVel="0" hivel="63"
+                    path="Samples/GEN_Synth_Bass_C5_SUS_S0.wav" />
+                            
+                <!-- KEY C5 :: ZONE 02 -->
+
+                    <sample loNote="72" rootNote="84" hiNote="108" loVel="64" hivel="94"
+                    path="Samples/GEN_Synth_Bass_C5_SUS_S1.wav" />
+                            
+                <!-- KEY C5 :: ZONE 03 -->
+            
+                    <sample loNote="72" rootNote="84" hiNote="108" loVel="95" hivel="127"
+                    path="Samples/GEN_Synth_Bass_C5_SUS_S2.wav" />
+                            
+                <!-- KEY C5 :: End of ZONES -->
+                
+            <!-- CLEAN SAMPLES :: End of KEY C5 -->
+
+        </group>
+        
+        <!-- GROUP 02 :: GLITCH SAMPLES -->
+        
+        <group ampVelTrack="0.92" attack=".10" release="1.00" tags="GLITCH">
+        
+            <!-- GLITCH SAMPLES :: KEY C5 -->
+            
+                <!-- KEY C5 :: ROUND ROBINS -->
+
+                <sample loNote="72" rootNote="84" hiNote="108"
+                seqMode="random" seqLength="3" seqPosition="1"
+                path="Samples/GEN_Synth_Bass_C5_Glitch_V1.wav" />
+                    
+                <sample loNote="72" rootNote="84" hiNote="108"
+                seqMode="random" seqLength="3" seqPosition="2"
+                path="Samples/GEN_Synth_Bass_C5_Glitch_V2.wav" />
+                    
+                <sample loNote="72" rootNote="84" hiNote="108"
+                seqMode="random" seqLength="3" seqPosition="3"
+                path="Samples/GEN_Synth_Bass_C5_Glitch_V3.wav" />
+                
+            <!-- GLITCH SAMPLES :: End of KEY C5 -->
+
+        </group>
+
+    </groups>
+    
+    <effects>
+    
+        <!-- EFFECT 00 :: Hi-Pass Filter -->
+        <effect type="highpass" resonance="0.5" frequency="15.0" />
+        
+        <!-- EFFECT 01 :: Low-Pass Filter -->
+        <effect type="lowpass" resonance="0.3" frequency="15000.0" />
+        
+        <!-- EFFECT 02 :: Convolution Reverb -->
+        <effect type="convolution" />
+    
+    </effects>
+    
+    <tags>
+    
+        <tag name="GLITCH" polyphony="3" />
+    
+    </tags>
+
+</DecentSampler>
