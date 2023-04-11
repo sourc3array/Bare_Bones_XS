@@ -3,15 +3,15 @@
 ![example workflow](https://github.com/sourc3array/Bare_Bones_XS/actions/workflows/basic_workflow.yml/badge.svg)
 
 **Bare Bones XS** is a basic UI kit for creating *Decent Sampler* virtual instruments. It enables anyone to quickly and easily create a fully-functional virtual instrument using only one sound sample and a text editor.
-
+ 
+##
 
 ![Bare Bones XS - UI Kit for Decent Sampler](/Bare_Bones_XS.dsbundle/UI/Bare_Bones_XS.png)
-
 
 ## Features
 
  - Four (4) virtual instrument templates
- - One (1) graphic knob
+ - One (1) graphic control knob 
  - Two (2) sets of graphic LED on/off switches
  - Three (3) generic console backgrounds: Sonic Silver, Gold Fusion and Alien Armpit
  - Support for two (2) primary sound Groups with A/B mix control
@@ -34,9 +34,11 @@ Bare Bones XS is compatible with Decent Sampler 1.7.0 and above.
 
    [https://github.com/sourc3array/Bare_Bones_XS](https://github.com/sourc3array/Bare_Bones_XS)
 
-2. Extract the ZIP file archive and move the 'Bare_Bones_XS.dsbundle' folder into your instruments folder for Decent Sampler.
+2. Extract the ZIP file archive and move the 'Bare_Bones_XS.dsbundle' folder into the instruments folder for Decent Sampler.
 
-3. Load the **Bare Bones XS** instrument using the file browser in the Decent Sampler plug-in or standalone player and choose an instrument preset.
+3. Load the **Bare Bones XS** instrument using the file browser in the Decent Sampler plug-in or standalone player.
+
+4. Choose an instrument preset using the options menu.
  
  ## License
 
