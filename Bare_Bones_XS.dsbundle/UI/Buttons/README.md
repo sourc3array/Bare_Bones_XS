@@ -1,11 +1,11 @@
 # WHAT ARE BUTTONS?
 
-Buttons are image files used by the *Decent Sampler* engine to create user interface (UI) controls for all of the **Bare Bones XS** virtual instrument presets.
+Buttons are image files used by Decent Sampler to create user interface (UI) controls for the **Bare Bones XS** instrument presets. Decent Sampler supports custom button images in PNG format.
 
 
 # USING BUTTONS
 
-**Bare Bones XS** includes two (2) sets of original switch designs that are used as buttons to provide on/off functionality for user controls. Each button set features an illuminated LED to indicate control status.
+**Bare Bones XS** includes two (2) sets of original switch designs that are used by the *Decent Sampler* engine as buttons to provide on/off functionality for user controls. Each button design set features an illuminated LED to indicate control status.
 
 To use custom button images, simply add the image files to the 'Buttons' folder and update your instument preset file(s) accordingly using a text editor.
 
