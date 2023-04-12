@@ -5,14 +5,14 @@ Buttons are image files used by the *Decent Sampler* engine to create user inter
 
 # USING BUTTONS
 
-**Bare Bones XS** includes two (2) sets of original switch buttons that are used to provide on/off functionality for user controls. Each button set features an illuminated LED to indicate control status.
+**Bare Bones XS** includes two (2) sets of original switch designs that are used as buttons to provide on/off functionality for user controls. Each button set features an illuminated LED to indicate control status.
 
-To use custom button images, simply add the file to the 'Buttons' folder and update your instument preset file(s) accordingly using a text editor.
+To use custom button images, simply add the image files to the 'Buttons' folder and update your instument preset file(s) accordingly using a text editor.
 
 
 # CREDITS & ATTRIBUTION
 
-Buttons included with the **Bare Bones XS** virtual instrument for *Decent Sampler* are derivative works licensed under GNU General Public License v3.0.
+Buttons included with the **Bare Bones XS** virtual instrument for *Decent Sampler* are derivative works licensed under *GNU General Public License v3.0*.
 
 © Copyright 2023 by Jason Krueger (sourc3array) @ GEN Audio.
 
