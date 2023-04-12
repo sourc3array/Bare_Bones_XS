@@ -22,7 +22,7 @@ Impulse response (IR) files included with the **Bare Bones XS** virtual instrume
  - 414185_microVerb_SM_01.wav
  - 414184_microVerb_SM_02.wav
  - 414181_microVerb_LG_03.wav
- - 414183_microVerb_LG_07.wav
+ - 414183_microVerb_LG_05.wav
  - 414182_microVerb_REV.wav
 
 Used under *Creative Commons 0* license.
