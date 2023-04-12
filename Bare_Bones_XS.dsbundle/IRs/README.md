@@ -4,8 +4,8 @@ In sound design, the **convolution** process is used to make one thing sound lik
 
 Though typically used to model reverbs and simulate guitar cabinets, the ability to morph any sound onto, into and through any other sound offers unlimited potential for creative sound designers. The sound source used for IRs can be anything: a specific physical space, analog tape machine, guitar pedal, vintage studio gear, broken microphone, symphony of purring cats, etc.
 
- - The Convolution effect is supported in Version 1.6.12 of Decent Sampler and above.
- - The Decent Sampler platform supports IR files in WAV or AIFF format.
+ - The Convolution effect is supported in Decent Sampler versions 1.6.12 and above.
+ - The Decent Sampler platform supports mono (untested) or stereo IR files in WAV or AIFF format.
 
 
 # Using IRs
@@ -55,6 +55,6 @@ Used under *Creative Commons Attribution 4.0* license.
 
 ## Resources & Information
 
-- [Decent Sampler Tutorial]( https://www.decentsamples.com/2022/11/23/for-sample-creators-how-to-use-convolution-in-your-decent-sampler-presets/ ): An overview of the Convolution effect for the Decent Sampler platform.
+- [Decent Sampler Tutorial]( https://www.decentsamples.com/2022/11/23/for-sample-creators-how-to-use-convolution-in-your-decent-sampler-presets/ ): A complete  overview of the Convolution effect for the Decent Sampler platform.
 
     
