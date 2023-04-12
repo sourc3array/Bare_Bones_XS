@@ -1,20 +1,23 @@
-# WHAT IS CONVOLUTION?
+# What Are IRs?
 
-In oversimplified terms, convolution is used to make one thing sound like something else. This is done by capturing the sonic fingerprint (typically reverb) of a specific sound source (like a location) in an impulse response (IR). This IR can then be used as a sonic infusion of sorts, lending any target sound the acoustic signature of the source sound as defined by its IR profile. 
+In sound design, the **convolution** process is used to make one thing sound like another. This is done by first capturing the sonic fingerprint (typically reverb) of a specific sound source (like a location) in an **impulse response** (IR) file. Through the convolution process, this IR file is then used as a blueprint of sorts to infuse any target sound with the defining sonic characteristics of the source sound. 
 
-The sound source used for IRs can be anything: a physical space, 80s reverb unit, analog tape machine, vintage guitar cabinet, broken microphone, symphony of purring cats, etc. Though typically used to model reverbs and simulate guitar cabinets, the ability to morph any sound onto another offers unlimited potential for creative sound explorers.
+Though typically used to model reverbs and simulate guitar cabinets, the ability to morph any sound onto, into and through any other sound offers unlimited potential for creative sound designers. The sound source used for IRs can be anything: a specific physical space, analog tape machine, guitar pedal, vintage studio gear, broken microphone, symphony of purring cats, etc.
 
-
-# USING CONVOLUTION
-
-**Bare Bones XS** includes ten (10) IR files for use with the Convolution Reverb effect built into the *Decent Sampler* engine. These IR profiles are utilized by the *Alien Armpit* virtual instrument preset and can be accesed using the included menu option for the reverb effect.
-
-To use additional IR files, simply add them to the 'IRs' folder and update the 'Alien Armpit.dspreset' file accordingly using a text editor.
+ - The Convolution effect is supported in Version 1.6.12 of Decent Sampler and above.
+ - The Decent Sampler platform supports IR files in WAV or AIFF format.
 
 
-# CREDITS & ATTRIBUTION
+# Using IRs
 
-Impulse response (IR) files included with the **Bare Bones XS** virtual instrument for *Decent Sampler* are Public Domain and/or used under Creative Commons license.
+**Bare Bones XS** includes ten (10) IR files for use with the Convolution effect utilized by the *Alien Armpit* instrument preset. A preset for each IR file is available through the *Alien Armpit* user interface (UI) using the corresponding menu option for the Reverb effect.
+
+To use custom IR files, simply add them to the 'IRs' folder and update the 'Alien Armpit.dspreset' file accordingly using a text editor.
+
+
+# Credits & Attribution
+
+IR files included with **Bare Bones XS** are Public Domain and/or used under Creative Commons license.
 
 
 ### IR files by [**joeribraams**]( https://freesound.org/people/joeribraams/ ):
@@ -45,10 +48,13 @@ Used under *Creative Commons 0* license.
 Used under *Creative Commons Attribution 4.0* license.
 
 
-# Public Domain & Creative Commons Licensing
-
-For more information, please visit:
+## Public Domain & Creative Commons Licensing
 
 - [Creative Commons 0]( http://creativecommons.org/publicdomain/zero/1.0/ )
 - [Creative Commons Attribution 4.0]( https://creativecommons.org/licenses/by/4.0/ )
+
+## Resources & Information
+
+- [Decent Sampler Tutorial]( https://www.decentsamples.com/2022/11/23/for-sample-creators-how-to-use-convolution-in-your-decent-sampler-presets/ ): An overview of the Convolution effect for the Decent Sampler platform.
+
     
