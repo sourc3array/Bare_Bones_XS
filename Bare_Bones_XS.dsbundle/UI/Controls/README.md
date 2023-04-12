@@ -1,12 +1,12 @@
 # WHAT ARE CONTROLS?
 
-User controls are the graphic knob files used by the *Decent Sampler* engine to create the user interface (UI) controls for the **Bare Bones XS** instrument. *Decent Sampler* supports custom JPEG or PNG control graphics in [KnobMan]( https://www.g200kg.com/knobman/ ) format.
+User controls are the graphic knob files used by *Decent Sampler* to create the user interface (UI) controls for the **Bare Bones XS** instrument. *Decent Sampler* supports custom JPEG or PNG control graphics in [KnobMan]( https://www.g200kg.com/knobman/ ) format.
 
 # USING CONTROLS
 
-**Bare Bones XS** includes one (1) knob file which is used by the *Decent Sampler* engine as a UI control across all of the **Bare Bones XS** instrument presets.
+**Bare Bones XS** includes two (2) knob files which are used by the *Decent Sampler* engine as UI controls for the **Bare Bones XS** instrument presets.
 
-To use additional knob files, simply add them to the 'Controls' folder and update the **Bare Bones XS** instrument preset file(s) accordingly using a text editor.
+To use custom knob files, simply add them to the 'Controls' folder and update your **Bare Bones XS** instrument preset file(s) accordingly using a text editor.
 
 
 # CREDITS & ATTRIBUTION
@@ -17,6 +17,12 @@ Knob files included with the **Bare Bones XS** virtual instrument for *Decent Sa
 ### Knob Files by Anonymous:
 
  - [Knob_ENIGMA.png]( https://www.g200kg.com/en/webknobman/gallery.php?m=p&p=1854 )
+
+Used under *Creative Commons 0* license.
+
+### Knob Files by Sasha Radojevic:
+
+ - [Knob_GAIA.png]( https://www.g200kg.com/en/webknobman/gallery.php?m=p&p=106 )
 
 Used under *Creative Commons 0* license.
 
