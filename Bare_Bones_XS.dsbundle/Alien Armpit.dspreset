@@ -31,13 +31,13 @@
             
             <!-- UI 03 :: LABEL > Knob B -->
             
-            <label x="315" y="165" width="72" height="36" text="SUSTAIN" textSize="15" textColor="FF333333" />
+            <label x="319" y="165" width="64" height="36" text="SUSTAIN" textSize="15" textColor="FF333333" />
 
             <!-- UI 04 :: Knob B > Sustain VOL -->
       
-            <control x="315" y="107" width="72" height="72" 
-            parameterName="SUSTAIN_VOL" type="float" minValue="0" maxValue="1" value="0.5"
-            style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
+            <control x="319" y="111" width="64" height="64" 
+            parameterName="SUSTAIN_VOL" type="float" minValue="0" maxValue="1" value="0.33"
+            style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_GAIA.png" customSkinNumFrames="101" customSkinImageOrientation="vertical">
                 <binding type="amp" level="group" position="1" parameter="AMP_VOLUME" translation="linear" />
                 <binding type="amp" level="group" position="0" parameter="AMP_VOLUME" translation="linear" translationReversed="true" />
             </control>
