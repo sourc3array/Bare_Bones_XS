@@ -7,9 +7,9 @@
 
 # Using Samples
 
-The **Bare Bones XS** sound bank includes *GEN Synth Bass* sample files for one note and one sustained note. Each note has been sampled across a range of saturation levels. This enables the creation of multiple velocity layers for instrument presets, where louder hits trigger increasingly agressive sounds.
+The **Bare Bones XS** sound bank includes *GEN Synth Bass* samples for one note and one sustained note. Each note has been sampled at pitch C5 across a range of saturation levels. This enables the creation of multiple velocity layers, where louder hits trigger increasingly agressive sounds.
 
-Also included are sample sets for a glitch and a sustained glitch, each sampled with random variations to enable up to five (5) unique round-robin variations.
+Also included are sample sets for a glitch and a sustained glitch, each sampled at pitch C5 with random variations to enable up to five (5) unique glitch sounds when used in a round-robin rotation.
 
 To use custom samples to create an original instrument, simply add the sound files to the 'Samples' folder and update your instument preset file(s) accordingly using a text editor.
 
