@@ -8,9 +8,14 @@
 
 # Using Buttons
 
-**Bare Bones XS** includes two (2) sets of original switch designs that are used as buttons to provide on/off functionality for user controls. Each switch design set features an illuminated LED to indicate control status.
+**Bare Bones XS** includes two (2) sets of original switch designs intended for use as UI buttons in your custom Decent Sampler instrument presets. Each switch design set features an illuminated LED to indicate control status.
 
-To use custom button images, simply add the image files to the 'Buttons' folder and update your instument preset file(s) accordingly using a text editor.
+Button switches are used extensively throughout **Bare Bones XS** to control groups, effects and other UI controls:
+
+ - A&thinsp;/&thinsp;B switching
+ - On&thinsp;/&thinsp;Off functionality 
+
+To use custom button images, simply add the image file(s) to the 'Buttons' folder and update your instument preset file(s) accordingly using a text editor.
 
 
 # Credits & Attribution
