@@ -39,6 +39,12 @@ Bare Bones XS is compatible with Decent Sampler 1.7.0 and above.
 3. Load the **Bare Bones XS** instrument using the file browser in the Decent Sampler plug-in or standalone player.
 
 4. Choose an instrument preset using the options menu.
+
+## Instrument Templates
+
+![UI - Sonic Silver](/Docs/Images/Preset_UI_Sonic_Silver.png)
+
+### Sonic Silver
  
  ## License
 
