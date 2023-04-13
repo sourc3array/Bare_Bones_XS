@@ -45,6 +45,10 @@ Bare Bones XS is compatible with Decent Sampler 1.7.0 and above.
 ![UI - Sonic Silver](/Docs/Images/Preset_UI_Sonic_Silver.png)
 
 ### Sonic Silver
+
+![UI - Alien Armpit](/Docs/Images/Preset_UI_Alien_Armpit.png)
+
+### Alien Armpit
  
  ## License
 
