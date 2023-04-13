@@ -1,6 +1,6 @@
 # What Are Samples?
 
-**Samples** are the sound files used by the *Decent Sampler* engine to create the sonic foundation for a virtual instrument. Collectively, the sound files in the 'Samples' folder comprise the *sound bank* for the instrument as a whole. The **Bare Bones XS** sound bank is what gives the *GEN Synth Bass* its signature sound across all of the instrument presets.
+**Samples** are the sound files used by the *Decent Sampler* engine to create the sonic foundation for a virtual instrument. Collectively, the sound files in the 'Samples' folder comprise the *sound bank* for the instrument as a whole. The **Bare Bones XS** sound bank is what gives the *GEN Synth Bass* its signature sound across all of its instrument presets.
 
  - The Decent Sampler platform supports mono (untested) or stereo sample files in WAV or AIFF format.
 
