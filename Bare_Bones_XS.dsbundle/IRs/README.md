@@ -2,7 +2,7 @@
 
 In sound design, the **convolution** process is used to make one thing sound like another. This is done by first capturing the sonic fingerprint (typically reverb) of a specific sound source (like a location) in an **impulse response** (IR) file. Through the convolution process, this IR file can then be used to infuse any target sound with the defining sonic characteristics of the source sound.
 
-Though typically used to model reverbs and simulate guitar cabinets, the ability to morph any sound onto, into and through any other sound offers unlimited potential for creative sound designers. The sound source used for IRs can be anything: any specific place, analog tape machine, magical guitar pedal, vintage studio gear, broken microphone, symphony of purring cats, etc.
+Though typically used to model reverbs and simulate guitar cabinets, the ability to morph any sound onto, into and through any other sound offers unlimited potential for creative sound designers. The sound source used for IRs can be anything: a specific place, analog tape machine, magical guitar pedal, vintage studio gear, broken microphone, symphony of purring cats, etc.
 
  - The convolution effect is supported in Decent Sampler versions 1.6.12 and above.
  - The Decent Sampler platform supports mono (untested) or stereo IR files in WAV or AIFF format.
