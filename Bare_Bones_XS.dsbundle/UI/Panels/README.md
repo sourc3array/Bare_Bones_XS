@@ -24,7 +24,7 @@ Panels are image files used by the Decent Sampler engine to create the user inte
 
 Backgrounds can be customized using an image editor.
 
-To use a custom images as backgrounds, simply add the image file(s) to the 'Panels' folder and update your instument preset file(s) accordingly using a text editor.
+To use custom images as backgrounds, simply add the image file(s) to the 'Panels' folder and update your instument preset file(s) accordingly using a text editor.
 
 ***
 
