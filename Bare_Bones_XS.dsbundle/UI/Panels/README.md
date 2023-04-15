@@ -8,7 +8,21 @@ Panels are image files used by the Decent Sampler engine to create the user inte
 
 # Using Panels
 
-**Bare Bones XS** includes three (3) original panel designs intended for use as backgrounds in your custom Decent Sampler instrument presets. Panels feature a vintage equipment theme in a variety of brushed-metallic colors and are intentionally blank to facilitate the creation of any conceivable UI layout or design. Backgrounds can be customized using an image editor.
+**Bare Bones XS** includes three (3) original panel designs intended for use as backgrounds in your custom Decent Sampler instrument presets. Panels feature a vintage equipment theme in a variety of brushed-metallic colors and are intentionally blank to facilitate the creation of any conceivable UI layout or design.
+
+### Sonic Silver
+
+![Panel Design - Sonic Silver]( /Bare_Bones_XS.dsbundle/UI/Panels/Panel_Sonic_Silver.png )
+
+### Gold Fusion
+
+![Panel Design - Gold Fusion]( /Bare_Bones_XS.dsbundle/UI/Panels/Panel_Gold_Fusion.png )
+
+### Alien Armpit
+
+![Panel Design - Alien Armpit]( /Bare_Bones_XS.dsbundle/UI/Panels/Panel_Alien_Armpit.png )
+
+Backgrounds can be customized using an image editor.
 
 To use a custom images as backgrounds, simply add the image file(s) to the 'Panels' folder and update your instument preset file(s) accordingly using a text editor.
 
