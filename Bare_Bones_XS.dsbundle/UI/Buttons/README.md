@@ -22,7 +22,7 @@ To use custom button images, simply add the image file(s) to the 'Buttons' folde
 
 Switch designs included with **Bare Bones XS** are derivative works licensed under *GNU General Public License v3.0*.
 
-© Copyright 2023 by Jason Krueger (sourc3array)
+© Copyright 2023 by Jason Krueger (sourc3array).
 
 
 ### Original Knob Designs by az:
