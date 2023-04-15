@@ -15,7 +15,7 @@ Button switches are used extensively throughout **Bare Bones XS** to control sou
  - A&thinsp;/&thinsp;B switching
  - On&thinsp;/&thinsp;Off functionality 
 
-To use custom button images, simply add the image file(s) to the 'Buttons' folder and update your instument preset file(s) accordingly using a text editor.
+To use custom button images, simply add the image files to the 'Buttons' folder and update your instument preset file(s) accordingly using a text editor.
 
 
 # Credits & Attribution
