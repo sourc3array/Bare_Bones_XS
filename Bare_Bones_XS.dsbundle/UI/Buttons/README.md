@@ -5,6 +5,7 @@
  - Buttons are supported in Decent Sampler versions 1.7.0 and above.
  - The Decent Sampler platform supports custom button images in PNG format.
 
+***
 
 # Using Buttons
 
@@ -17,6 +18,7 @@ Button switches are used extensively throughout **Bare Bones XS** to control sou
 
 To use custom button images, simply add the image files to the 'Buttons' folder and update your instument preset file(s) accordingly using a text editor.
 
+***
 
 # Credits & Attribution
 
@@ -24,6 +26,7 @@ Switch designs included with **Bare Bones XS** are derivative works licensed und
 
 © Copyright 2023 by Jason Krueger (sourc3array).
 
+***
 
 ### Original Knob Designs by az:
 
@@ -33,11 +36,14 @@ Switch designs included with **Bare Bones XS** are derivative works licensed und
  
 © Copyright 2011 by az. Used under *Creative Commons CC BY-NC 3.0* license.
 
+***
 
 ## GNU GPL & Creative Commons Licensing
 
 - [GNU General Public License v3.0]( https://www.gnu.org/licenses/gpl-3.0.en.html )
 - [Creative Commons CC BY-NC 3.0]( https://creativecommons.org/licenses/by/3.0/ )
+
+***
 
 ## Resources & Information
 
