@@ -1,3 +1,14 @@
+<!--
+
+    GEN Audio: Precision virtual instruments, UI kits and templates for the Decent Sampler platform
+    Instrument Preset: Sonic Silver | Version: 1.0.0-Beta.1
+    Designer: Jason Krueger (sourc3array)
+    License: GNU GPL v3.0
+    GitHub: https://github.com/sourc3array/Bare_Bones_XS
+    Visit us at https://genaudio.biz | Contact us at info@genaudio.biz
+    
+-->
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <DecentSampler minVersion="1.0.0">
@@ -5,14 +16,18 @@
     <ui width="812" height="375" bgImage="UI/Panels/Panel_Sonic_Silver.png" bgColor="#757575" layoutMode="relative" bgMode="top_left">
 
         <tab name="main">
+        
+            <!-- UI 00 :: LABEL > Preset Title -->
+            
+            <label x="0" y="0" width="812" height="198" text="SONIC SILVER" textSize="144" textColor="FF757575" />
             
             <!-- UI 00 :: LABEL > Switch A -->
             
-            <label x="136" y="89" width="72" height="36" text="HI" textSize="18" textColor="FFE5F5DC" />
+            <label x="138" y="88" width="72" height="36" text="HI" textSize="18" textColor="FFE5F5DC" />
             
             <!-- UI 01 :: SWITCH A > High-Pass Filter (RUMBLE) -->
             
-            <button x="136" y="105" width="72" height="72" style="image" value="0">
+            <button x="138" y="112" width="72" height="72" style="image" value="0">
                 <state name="SWITCH_A_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
                     <binding type="effect" level="instrument" position="0" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="15" />
                 </state>
@@ -23,11 +38,11 @@
             
             <!-- UI 02 :: LABEL > Switch B -->
             
-            <label x="208" y="89" width="72" height="36" text="LO" textSize="18" textColor="FFE5F5DC" />
+            <label x="208" y="88" width="72" height="36" text="LO" textSize="18" textColor="FFE5F5DC" />
             
             <!-- UI 03 :: SWITCH B > Low-Pass Filter (NOISE) -->
             
-            <button x="208" y="105" width="72" height="72" style="image" value="0">
+            <button x="208" y="112" width="72" height="72" style="image" value="0">
                 <state name="SWITCH_B_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
                     <binding type="effect" level="instrument" position="1" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="20000" />
                 </state>
@@ -38,11 +53,11 @@
             
             <!-- UI 04 :: LABEL > Switch C -->
             
-            <label x="529" y="89" width="72" height="36" text="FX" textSize="18" textColor="FFE5F5DC" />
+            <label x="529" y="88" width="72" height="36" text="FX" textSize="18" textColor="FFE5F5DC" />
         
             <!-- UI 05 :: SWITCH C > FX ON/OFF -->
             
-            <button x="529" y="105" width="72" height="72" style="image" value="0">
+            <button x="529" y="112" width="72" height="72" style="image" value="1">
                 <state name="FX_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
                     <binding type="effect" level="instrument" position="2" parameter="ENABLED" translation="fixed_value" translationValue="false" />
                 </state>
@@ -53,12 +68,12 @@
             
             <!-- UI 06 :: LABEL > Knob A -->
             
-            <label x="644" y="89" width="72" height="36" text="MIX" textSize="18" textColor="FFE5F5DC" />
+            <label x="644" y="88" width="72" height="36" text="MIX" textSize="18" textColor="FFE5F5DC" />
 
             <!-- UI 07 :: Knob A -->
       
-            <control x="587" y="71" width="72" height="72" 
-            parameterName="KNOB_A" type="float" minValue="0" maxValue="1" value="0.2" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+            <control x="587" y="70" width="72" height="72" 
+            parameterName="KNOB_A" type="float" minValue="0" maxValue="1" value="0.5" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
                 <binding type="effect" level="instrument" position="2" parameter="FX_REVERB_WET_LEVEL"
                 translation="linear" translationOutputMin="0.1" translationOutputMax="0.3" />
             </control>
@@ -66,16 +81,16 @@
         </tab>
       
         <keyboard>
-            <color loNote="72" hiNote="108" color="C2C2C2" /><!-- Key Range -->
+            <color loNote="72" hiNote="108" color="E1E1E1" /><!-- Key Range -->
         </keyboard>
 
     </ui>
 
-    <groups attack="0.01" decay="25" sustain="0.52" release="0.05" volume="0.92">
+    <groups attack="0.01" decay="0.1" sustain="0.5" release="0.1">  
 
         <!-- GROUP 00 :: SINGLE SAMPLE INSTRUMENT (SSI) -->
 
-        <group ampVelTrack="0.92" volume="1.00">
+        <group ampVelTrack="0.8">
             
             <!-- KEY C5 :: ZONE 01 -->
 
