@@ -8,7 +8,7 @@
  - Customize your sound with **effects** including high- and low-pass filters, reverb, chorus, convoltion and distortion.
  - Build **production-level instruments** with multiple sound groups, velocity layers, round-robins and MIDI command controllers (CCs). 
 
-The UI kit includes all of the knobs, switches and backgrounds needed to create custom user interface (UI) designs for your Decent Sampler instrument presets. Also included are 10 impulse response (IR) files for use with the convolution effect.
+The UI kit includes all of the [knobs]( /Bare_Bones_XS.dsbundle/UI/Controls/ ), [switches]( /Bare_Bones_XS.dsbundle/UI/Buttons/ ) and [panel backgrounds]( /Bare_Bones_XS.dsbundle/UI/Panels/ ) needed to create custom user interface (UI) designs for your Decent Sampler instrument presets. Also included are 10 [impulse response (IR) files]( /Bare_Bones_XS.dsbundle/IRs/ ) for use with the convolution effect.
 
 ***
 
