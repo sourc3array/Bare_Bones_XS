@@ -1,80 +1,121 @@
+<!--
+
+    GEN Audio: Precision virtual instruments, UI kits and templates for the Decent Sampler platform
+    Instrument Preset: Gold Fusion | Version: 1.0.0-Beta.1
+    Designer: Jason Krueger (sourc3array)
+    License: GNU GPL v3.0
+    GitHub: https://github.com/sourc3array/Bare_Bones_XS
+    Visit us at https://genaudio.biz | Contact us at info@genaudio.biz
+    
+-->
+
 <?xml version="1.0" encoding="UTF-8"?>
 
 <DecentSampler minVersion="1.0.0">
 
-    <ui width="812" height="375" bgImage="UI/Panels/Panel_Gold_Fusion.png" bgColor="#757575" layoutMode="relative" bgMode="top_left">
+    <ui width="812" height="375" bgImage="UI/Panels/Panel_Gold_Fusion.png" bgColor="#85754E" layoutMode="relative" bgMode="top_left">
 
         <tab name="main">
+        
+            <!-- UI 00 :: LABEL > Preset Title -->
             
-            <!-- UI 00 :: LABEL > Switch A -->
+            <label x="0" y="0" width="812" height="198" text="GOLD FUSION" textSize="144" textColor="FF85754E" />
             
-            <label x="136" y="89" width="72" height="36" text="HI" textSize="18" textColor="FFE5F5DC" />
+            <!-- UI 01 :: LABEL > Switch A -->
             
-            <!-- UI 01 :: SWITCH A > High-Pass Filter (RUMBLE) -->
+            <label x="160" y="112" width="48" height="72" text="DRIVE" textSize="18" textColor="FFFAF9F4" />
             
-            <button x="136" y="105" width="72" height="72" style="image" value="0">
+            <!-- UI 02 :: SWITCH A > Drive ON/OFF -->
+            
+            <button x="208" y="112" width="72" height="72" style="image" value="1">
                 <state name="SWITCH_A_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
-                    <binding type="effect" level="instrument" position="0" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="15" />
+                    <binding type="effect" level="group" groupIndex="0" effectIndex="0" parameter="ENABLED" translation="fixed_value" translationValue="false" />
                 </state>
                 <state name="SWITCH_A_ON" mainImage="UI/Buttons/Toggle_LED_ON_Alien_Armpit.png">
-                    <binding type="effect" level="instrument" position="0" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="80" />
+                    <binding type="effect" level="group" groupIndex="0" effectIndex="0" parameter="ENABLED" translation="fixed_value" translationValue="true" />
+                 </state>
+            </button>
+
+            <!-- UI 03 :: KNOB A > Drive (Group A) -->
+      
+            <control x="160" y="82" width="48" height="48" 
+            parameterName="KNOB_A" type="float" minValue="0" maxValue="1" value="0.1" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+                <binding type="effect" level="group" groupIndex="0" effectIndex="0"  parameter="FX_DRIVE"
+                translation="linear" translationOutputMin="1" translationOutputMax="1000" />
+            </control>
+            
+            <!-- UI 04 :: LABEL > Sound Group A -->
+            
+            <label x="322" y="112" width="72" height="72" text="A" textSize="18" textColor="FFFAF9F4" />
+
+            <!-- UI 05 :: KNOB B > Sound Group A - VOL -->
+      
+            <control x="322" y="70" width="72" height="72" 
+            parameterName="KNOB_A" type="float" minValue="0" maxValue="1" value="0.33" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+                <binding type="amp" level="group" position="0" parameter="AMP_VOLUME"
+                translation="linear" translationOutputMin="0.0" translationOutputMax="1.0" />
+            </control>
+            
+            <!-- UI 06 :: LABEL > Sound Group B -->
+            
+            <label x="436" y="112" width="72" height="72" text="B" textSize="18" textColor="FFFAF9F4" />
+            
+            <!-- UI 07 :: Knob C > Group B Volume -->
+      
+            <control x="436" y="70" width="72" height="72" 
+            parameterName="KNOB_B" type="float" minValue="0" maxValue="1" value="0.66" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+                <binding type="amp" level="group" position="1" parameter="AMP_VOLUME"
+                translation="linear" translationOutputMin="0.0" translationOutputMax="1.0" />
+            </control>
+            
+            <!-- UI 08 :: LABEL > FX -->
+            
+            <label x="550" y="112" width="36" height="72" text="FX:" textSize="18" textColor="FFFAF9F4" />
+            
+            <!-- UI 09 :: BUTTON B > FX Switch -->
+      
+            <button x="550" y="88" width="36" height="36" style="image" value="1">
+                <state name="FX_REVERB" mainImage="UI/Buttons/Switch_XS_A.png">
+                    <binding type="effect" level="instrument" position="2" parameter="ENABLED" translation="fixed_value" translationValue="true" />
+                    <binding type="effect" level="instrument" position="3" parameter="ENABLED" translation="fixed_value" translationValue="false" />
+                    <binding type="control" level="ui" position="10" parameter="TEXT" translation="fixed_value" translationValue="REVERB" />
+                </state>
+                <state name="FX_CHORUS" mainImage="UI/Buttons/Switch_XS_B.png">
+                    <binding type="effect" level="instrument" position="2" parameter="ENABLED" translation="fixed_value" translationValue="false" />
+                    <binding type="effect" level="instrument" position="3" parameter="ENABLED" translation="fixed_value" translationValue="true" />
+                    <binding type="control" level="ui" position="10" parameter="TEXT" translation="fixed_value" translationValue="CHORUS" />
                  </state>
             </button>
             
-            <!-- UI 02 :: LABEL > Switch B -->
+            <!-- UI 10 :: LABEL > FX -->
             
-            <label x="208" y="89" width="72" height="36" text="LO" textSize="18" textColor="FFE5F5DC" />
+            <label x="587" y="112" width="72" height="72" text="MIX" textSize="18" textColor="FFFAF9F4" />
             
-            <!-- UI 03 :: SWITCH B > Low-Pass Filter (NOISE) -->
-            
-            <button x="208" y="105" width="72" height="72" style="image" value="0">
-                <state name="SWITCH_B_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
-                    <binding type="effect" level="instrument" position="1" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="20000" />
-                </state>
-                <state name="SWITCH_B_ON" mainImage="UI/Buttons/Toggle_LED_ON_Alien_Armpit.png">
-                    <binding type="effect" level="instrument" position="1" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="12000" />
-                </state>
-            </button>
-            
-            <!-- UI 04 :: LABEL > Switch C -->
-            
-            <label x="529" y="89" width="72" height="36" text="FX" textSize="18" textColor="FFE5F5DC" />
-        
-            <!-- UI 05 :: SWITCH C > FX ON/OFF -->
-            
-            <button x="529" y="105" width="72" height="72" style="image" value="0">
-                <state name="FX_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
-                    <binding type="effect" level="instrument" position="2" parameter="ENABLED" translation="fixed_value" translationValue="false" />
-                </state>
-                <state name="FX_ON" mainImage="UI/Buttons/Toggle_LED_ON_Alien_Armpit.png">
-                    <binding type="effect" level="instrument" position="2" parameter="ENABLED" translation="fixed_value" translationValue="true" />
-                </state>
-            </button>
-
-            <!-- UI 06 :: Knob A -->
+            <!-- UI 11 :: KNOB C > FX MIX -->
       
-            <control x="587" y="71" width="72" height="72" 
-            parameterName="KNOB_A" type="float" minValue="0" maxValue="1" value="0.2" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+            <control x="587" y="70" width="72" height="72" 
+            parameterName="KNOB_C" type="float" minValue="0" maxValue="1" value="0.3" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
                 <binding type="effect" level="instrument" position="2" parameter="FX_REVERB_WET_LEVEL"
-                translation="linear" translationOutputMin="0.1" translationOutputMax="0.5" />
+                translation="linear" translationOutputMin="0" translationOutputMax="0.5" />
+                <binding type="effect" level="instrument" position="3" parameter="FX_MIX"
+                translation="linear" translationOutputMin="0" translationOutputMax="1" />
             </control>
 
         </tab>
       
         <keyboard>
-            <color loNote="72" hiNote="72" color="9B9B9B" /><!-- Note C4 -->
-            <color loNote="72" hiNote="83" color="C2C2C2" />
-            <color loNote="84" hiNote="84" color="9B9B9B" /><!-- Note C5 -->
-             <color loNote="85" hiNote="108" color="9B9B9B" /><!-- Note C6 -->
+            <color loNote="72" hiNote="83" color="e8dfc8" /> <!-- Note C4 -->
+            <color loNote="84" hiNote="84" color="dfd2b1" /> <!-- Note C5 -->
+            <color loNote="85" hiNote="108" color="e8dfc8" /><!-- Note C6 -->
         </keyboard>
 
     </ui>
 
-    <groups attack="0.01" decay="25" sustain="0.52" release="0.05" volume="0.92">
+    <groups attack="0.01" decay="0.1" sustain="0.5" release="0.1">
 
         <!-- GROUP 00 :: CLEAN SAMPLES -->
 
-        <group ampVelTrack="0.92" volume="1.00">
+        <group ampVelTrack="0.8">
         
             <!-- CLEAN SAMPLES :: KEY C5 -->
             
@@ -96,6 +137,43 @@
                 <!-- KEY C5 :: End of ZONES -->
                 
             <!-- CLEAN SAMPLES :: End of KEY C5 -->
+            
+            <!-- GROUP FX -->
+            
+            <effects>
+            
+                <!-- GROUP FX 00 :: WAVE SHAPER -->
+                
+                <effect type="wave_shaper" driveBoost="0.1" outputLevel="0.1" enabled="false" />
+            
+            </effects>
+            
+        </group>
+            
+            <!-- GROUP 01 :: SUSTAINED SAMPLE -->
+
+        <group ampVelTrack="0.9" release="2.00">
+        
+            <!-- SUS SAMPLES :: KEY C5 -->
+            
+                <!-- KEY C5 :: ZONE 01 -->
+
+                    <sample loNote="72" rootNote="84" hiNote="108" loVel="0" hivel="63"
+                    path="Samples/GEN_Synth_Bass_C5_SUS_S0.wav" />
+                            
+                <!-- KEY C5 :: ZONE 02 -->
+
+                    <sample loNote="72" rootNote="84" hiNote="108" loVel="64" hivel="94"
+                    path="Samples/GEN_Synth_Bass_C5_SUS_S1.wav" />
+                            
+                <!-- KEY C5 :: ZONE 03 -->
+            
+                    <sample loNote="72" rootNote="84" hiNote="108" loVel="95" hivel="127"
+                    path="Samples/GEN_Synth_Bass_C5_SUS_S2.wav" />
+                            
+                <!-- KEY C5 :: End of ZONES -->
+                
+            <!-- CLEAN SAMPLES :: End of KEY C5 -->
 
         </group>
 
@@ -111,6 +189,9 @@
         
         <!-- EFFECT 02 :: Reverb -->
         <effect type="reverb" roomSize=".3" damping=".3" />
+        
+        <!-- EFFECT 03 :: Chorus -->
+        <effect type="chorus" modDepth="0.3" modRate="0.3"/>
     
     </effects>
 
