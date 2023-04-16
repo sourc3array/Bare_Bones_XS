@@ -86,6 +86,6 @@ This program is distributed in the hope that it will be useful, but WITHOUT ANY 
 
  ## References & Information
  
- 1. [GEN Audio]( https://genaudio.biz ) Precision virtual instruments, UI kits and templates for the Decent Sampler platform.
+ 1. [GEN Audio]( https://genaudio.biz ): Precision virtual instruments, UI kits and templates for the Decent Sampler platform.
  2. [Decent Sampler]( https://www.decentsamples.com/product/decent-sampler-plugin/ ): A FREE sampling plugin and stand-alone player for Windows, MAC and Linux that enables users to create and play virtual instruments in the Decent Sampler format.
  
