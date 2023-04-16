@@ -1,32 +1,33 @@
 <!--
 
-    GEN Audio: Precision virtual instruments, UI kits and templates for the Decent Sampler platform
-    Instrument Preset: Sonic Silver | Version: 1.0.0-Beta.1
+    Instrument: Bare Bones XS
+    Preset: Sonic Silver | Version: 1.0.0-Beta.1
     Designer: Jason Krueger (sourc3array)
     License: GNU GPL v3.0
     GitHub: https://github.com/sourc3array/Bare_Bones_XS
-    Visit us at https://genaudio.biz | Contact us at info@genaudio.biz
-    
+
+    Visit GEN Audio at https://genaudio.biz
+
 -->
 
 <?xml version="1.0" encoding="UTF-8"?>
 
-<DecentSampler minVersion="1.0.0">
+<DecentSampler minVersion="1.7.0">
 
     <ui width="812" height="375" bgImage="UI/Panels/Panel_Sonic_Silver.png" bgColor="#757575" layoutMode="relative" bgMode="top_left">
 
         <tab name="main">
-        
+
             <!-- UI 00 :: LABEL > Preset Title -->
-            
+
             <label x="0" y="0" width="812" height="198" text="SONIC SILVER" textSize="144" textColor="FF757575" />
-            
-            <!-- UI 00 :: LABEL > Switch A -->
-            
+
+            <!-- UI 01 :: LABEL > Switch A -->
+
             <label x="138" y="88" width="72" height="36" text="HI" textSize="18" textColor="FFE5F5DC" />
-            
-            <!-- UI 01 :: SWITCH A > High-Pass Filter (RUMBLE) -->
-            
+
+            <!-- UI 02 :: SWITCH A > High-Pass Filter (RUMBLE) -->
+
             <button x="138" y="112" width="72" height="72" style="image" value="0">
                 <state name="SWITCH_A_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
                     <binding type="effect" level="instrument" position="0" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="15" />
@@ -35,13 +36,13 @@
                     <binding type="effect" level="instrument" position="0" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="100" />
                  </state>
             </button>
-            
-            <!-- UI 02 :: LABEL > Switch B -->
-            
+
+            <!-- UI 03 :: LABEL > Switch B -->
+
             <label x="208" y="88" width="72" height="36" text="LO" textSize="18" textColor="FFE5F5DC" />
-            
-            <!-- UI 03 :: SWITCH B > Low-Pass Filter (NOISE) -->
-            
+
+            <!-- UI 04 :: SWITCH B > Low-Pass Filter (NOISE) -->
+
             <button x="208" y="112" width="72" height="72" style="image" value="0">
                 <state name="SWITCH_B_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
                     <binding type="effect" level="instrument" position="1" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="20000" />
@@ -50,13 +51,13 @@
                     <binding type="effect" level="instrument" position="1" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="12000" />
                 </state>
             </button>
-            
-            <!-- UI 04 :: LABEL > Switch C -->
-            
+
+            <!-- UI 05 :: LABEL > Switch C -->
+
             <label x="529" y="88" width="72" height="36" text="FX" textSize="18" textColor="FFE5F5DC" />
-        
-            <!-- UI 05 :: SWITCH C > FX ON/OFF -->
-            
+
+            <!-- UI 06 :: SWITCH C > FX ON/OFF -->
+
             <button x="529" y="112" width="72" height="72" style="image" value="1">
                 <state name="FX_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
                     <binding type="effect" level="instrument" position="2" parameter="ENABLED" translation="fixed_value" translationValue="false" />
@@ -65,53 +66,59 @@
                     <binding type="effect" level="instrument" position="2" parameter="ENABLED" translation="fixed_value" translationValue="true" />
                 </state>
             </button>
-            
-            <!-- UI 06 :: LABEL > Knob A -->
-            
+
+            <!-- UI 07 :: LABEL > Knob A -->
+
             <label x="644" y="88" width="72" height="36" text="MIX" textSize="18" textColor="FFE5F5DC" />
 
-            <!-- UI 07 :: Knob A -->
-      
-            <control x="587" y="70" width="72" height="72" 
-            parameterName="KNOB_A" type="float" minValue="0" maxValue="1" value="0.5" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
-                <binding type="effect" level="instrument" position="2" parameter="FX_REVERB_WET_LEVEL"
-                translation="linear" translationOutputMin="0.1" translationOutputMax="0.3" />
+            <!-- UI 08 :: KNOB A > FX Mix -->
+
+            <control x="587" y="70" width="72" height="72" parameterName="KNOB_A" type="float" minValue="0" maxValue="1" value="0.5" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+                <binding type="effect" level="instrument" position="2" parameter="FX_REVERB_WET_LEVEL" translation="linear" translationOutputMin="0.1" translationOutputMax="0.3" />
             </control>
 
         </tab>
-      
+
         <keyboard>
-            <color loNote="72" hiNote="108" color="E1E1E1" /><!-- Key Range -->
+            <color loNote="72" hiNote="108" color="E1E1E1" /> <!-- Key Range C4:C7 -->
         </keyboard>
 
     </ui>
 
-    <groups attack="0.01" decay="0.1" sustain="0.5" release="0.1">  
+    <groups attack="0.01" decay="0.10" sustain="0.50" release="0.10">
 
-        <!-- GROUP 00 :: SINGLE SAMPLE INSTRUMENT (SSI) -->
+        <!-- GROUP 00 :: NOTES -->
 
         <group ampVelTrack="0.8">
-            
-            <!-- KEY C5 :: ZONE 01 -->
 
-            <sample loNote="72" rootNote="84" hiNote="108" 
-            path="Samples/GEN_Synth_Bass_C5_S0.wav" />
+            <!-- NOTE 01 :: C5 -->
+
+                <!-- C5 :: ZONE 01 > Saturation Level 0 -->
+
+                    <sample loNote="72" rootNote="84" hiNote="108" path="Samples/GEN_Synth_Bass_C5_S0.wav" />
+
+                <!-- ZONE 01 :: END -->
+
+            <!-- NOTE C5 :: END -->
 
         </group>
 
     </groups>
-    
+
     <effects>
-    
-        <!-- EFFECT 00 :: Hi-Pass Filter -->
+
+        <!-- EFFECT 00 :: HI-PASS FILTER (RUMBLE) -->
+
         <effect type="highpass" resonance="0.3" frequency="15.0" />
-        
-        <!-- EFFECT 01 :: Low-Pass Filter -->
+
+        <!-- EFFECT 01 :: LOW-PASS FILTER (NOISE) -->
+
         <effect type="lowpass" resonance="0.7" frequency="20000" />
-        
+
         <!-- EFFECT 02 :: Reverb -->
+
         <effect type="reverb" roomSize=".3" damping=".3" />
-    
+
     </effects>
 
 </DecentSampler>
