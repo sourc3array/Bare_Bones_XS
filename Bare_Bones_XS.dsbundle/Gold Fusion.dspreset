@@ -26,7 +26,7 @@
 
             <label x="160" y="112" width="48" height="72" text="DRIVE" textSize="18" textColor="FFFAF9F4" />
 
-            <!-- UI 02 :: BUTTON A > LED Switch > Drive ON/OFF -->
+            <!-- UI 02 :: BUTTON A > LED Switch > Drive > ON/OFF -->
 
             <button x="208" y="112" width="72" height="72" style="image" value="1">
                 <state name="SWITCH_A_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
@@ -37,7 +37,7 @@
                  </state>
             </button>
 
-            <!-- UI 03 :: KNOB A > Drive Mix [Sound Group A] -->
+            <!-- UI 03 :: KNOB A > Drive Mix > Sound Group A -->
 
             <control x="160" y="82" width="48" height="48" parameterName="KNOB_A" type="float" minValue="0" maxValue="1" value="0.1" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
                 <binding type="effect" level="group" groupIndex="0" effectIndex="0"  parameter="FX_DRIVE" translation="linear" translationOutputMin="1" translationOutputMax="1000" />
@@ -67,7 +67,7 @@
 
             <label x="550" y="112" width="36" height="72" text="FX:" textSize="18" textColor="FFFAF9F4" />
 
-            <!-- UI 09 :: BUTTON B > FX Switch > Reverb / Chorus -->
+            <!-- UI 09 :: BUTTON B > Utility Switch > FX > Reverb / Chorus -->
 
             <button x="550" y="88" width="36" height="36" style="image" value="1">
                 <state name="FX_REVERB" mainImage="UI/Buttons/Switch_XS_A.png">
@@ -136,7 +136,7 @@
 
             <effects>
 
-                <!-- GROUP FX 00 :: WAVE SHAPER -->
+                <!-- [G0] FX 00 :: WAVE SHAPER -->
                 <effect type="wave_shaper" driveBoost="0.1" outputLevel="0.1" />
 
             </effects>
@@ -169,16 +169,16 @@
 
     <effects>
 
-        <!-- EFFECT 00 :: Hi-Pass Filter -->
+        <!-- [I] FX 00 :: Hi-Pass Filter -->
         <effect type="highpass" resonance="0.3" frequency="15.0" />
 
-        <!-- EFFECT 01 :: Low-Pass Filter -->
+        <!-- [I] FX 01 :: Low-Pass Filter -->
         <effect type="lowpass" resonance="0.7" frequency="20000" />
 
-        <!-- EFFECT 02 :: Reverb -->
+        <!-- [I] FX 02 :: Reverb -->
         <effect type="reverb" roomSize=".3" damping=".3" />
 
-        <!-- EFFECT 03 :: Chorus -->
+        <!-- [I] FX 03 :: Chorus -->
         <effect type="chorus" modDepth="0.3" modRate="0.3" />
 
     </effects>

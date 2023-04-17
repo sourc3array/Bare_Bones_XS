@@ -18,45 +18,45 @@
 
         <tab name="main">
 
-            <!-- UI 00 :: LABEL > Preset Title -->
+            <!-- UI 00 :: LABEL > Preset Title (SONIC SILVER) -->
 
             <label x="0" y="0" width="812" height="198" text="SONIC SILVER" textSize="144" textColor="FF757575" />
 
-            <!-- UI 01 :: LABEL > Switch A -->
+            <!-- UI 01 :: LABEL > Button A (HI) -->
 
             <label x="138" y="88" width="72" height="36" text="HI" textSize="18" textColor="FFE5F5DC" />
 
-            <!-- UI 02 :: SWITCH A > High-Pass Filter (RUMBLE) -->
+            <!-- UI 02 :: BUTTON A > LED Switch > High-Pass (Rumble) Filter > ON/OFF -->
 
             <button x="138" y="112" width="72" height="72" style="image" value="0">
-                <state name="SWITCH_A_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
+                <state name="HI_PASS_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
                     <binding type="effect" level="instrument" position="0" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="15" />
                 </state>
-                <state name="SWITCH_A_ON" mainImage="UI/Buttons/Toggle_LED_ON_Alien_Armpit.png">
+                <state name="HI_PASS_ON" mainImage="UI/Buttons/Toggle_LED_ON_Alien_Armpit.png">
                     <binding type="effect" level="instrument" position="0" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="100" />
                  </state>
             </button>
 
-            <!-- UI 03 :: LABEL > Switch B -->
+            <!-- UI 03 :: LABEL > Button B (LO) -->
 
             <label x="208" y="88" width="72" height="36" text="LO" textSize="18" textColor="FFE5F5DC" />
 
-            <!-- UI 04 :: SWITCH B > Low-Pass Filter (NOISE) -->
+            <!-- UI 04 :: BUTTON B > LED Switch > Low-Pass (Noise) Filter > ON/OFF -->
 
             <button x="208" y="112" width="72" height="72" style="image" value="0">
-                <state name="SWITCH_B_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
+                <state name="LOW_PASS_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
                     <binding type="effect" level="instrument" position="1" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="20000" />
                 </state>
-                <state name="SWITCH_B_ON" mainImage="UI/Buttons/Toggle_LED_ON_Alien_Armpit.png">
+                <state name="LOW_PASS_ON" mainImage="UI/Buttons/Toggle_LED_ON_Alien_Armpit.png">
                     <binding type="effect" level="instrument" position="1" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="12000" />
                 </state>
             </button>
 
-            <!-- UI 05 :: LABEL > Switch C -->
+            <!-- UI 05 :: LABEL > Button C (FX) -->
 
             <label x="529" y="88" width="72" height="36" text="FX" textSize="18" textColor="FFE5F5DC" />
 
-            <!-- UI 06 :: SWITCH C > FX ON/OFF -->
+            <!-- UI 06 :: BUTTON C > LED Switch > FX > ON/OFF -->
 
             <button x="529" y="112" width="72" height="72" style="image" value="1">
                 <state name="FX_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
@@ -67,11 +67,11 @@
                 </state>
             </button>
 
-            <!-- UI 07 :: LABEL > Knob A -->
+            <!-- UI 07 :: LABEL > Knob A (MIX)-->
 
             <label x="644" y="88" width="72" height="36" text="MIX" textSize="18" textColor="FFE5F5DC" />
 
-            <!-- UI 08 :: KNOB A > FX Mix -->
+            <!-- UI 08 :: KNOB A > FX > Mix -->
 
             <control x="587" y="70" width="72" height="72" parameterName="KNOB_A" type="float" minValue="0" maxValue="1" value="0.5" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
                 <binding type="effect" level="instrument" position="2" parameter="FX_REVERB_WET_LEVEL" translation="linear" translationOutputMin="0.1" translationOutputMax="0.3" />
@@ -80,26 +80,27 @@
         </tab>
 
         <keyboard>
-            <color loNote="72" hiNote="108" color="E1E1E1" /> <!-- Key Range C4:C7 -->
+
+            <!-- MIDI C4:C7 -->
+            <color loNote="72" hiNote="108" color="E1E1E1" />
+
         </keyboard>
 
     </ui>
 
     <groups attack="0.01" decay="0.10" sustain="0.50" release="0.10">
 
-        <!-- GROUP 00 :: NOTES -->
+        <!-- SOUND GROUP 00 :: GEN Synth Bass > Notes -->
 
         <group ampVelTrack="0.8">
 
-            <!-- NOTE 01 :: C5 -->
+            <!-- NOTE 01 :: GEN Synth Bass > Note C5 -->
 
-                <!-- C5 :: ZONE 01 > Saturation Level 0 -->
-
+                <!-- GSB-NC5 :: ZONE 01 > Saturation Level 0 -->
                     <sample loNote="72" rootNote="84" hiNote="108" path="Samples/GEN_Synth_Bass_C5_S0.wav" />
-
                 <!-- ZONE 01 :: END -->
 
-            <!-- NOTE C5 :: END -->
+            <!-- GSB-NC5 :: END -->
 
         </group>
 
@@ -107,16 +108,13 @@
 
     <effects>
 
-        <!-- EFFECT 00 :: HI-PASS FILTER (RUMBLE) -->
-
+        <!-- [I] EFFECT 00 :: Hi-Pass (Rumble) Filter -->
         <effect type="highpass" resonance="0.3" frequency="15.0" />
 
-        <!-- EFFECT 01 :: LOW-PASS FILTER (NOISE) -->
-
+        <!-- [I] EFFECT 01 :: Low-Pass (Noise) Filter -->
         <effect type="lowpass" resonance="0.7" frequency="20000" />
 
-        <!-- EFFECT 02 :: Reverb -->
-
+        <!-- [I] EFFECT 02 :: Reverb -->
         <effect type="reverb" roomSize=".3" damping=".3" />
 
     </effects>
