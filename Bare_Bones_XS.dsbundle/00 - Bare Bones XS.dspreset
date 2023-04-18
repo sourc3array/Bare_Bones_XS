@@ -12,7 +12,7 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
 
-<DecentSampler minVersion="1.7.2">
+<DecentSampler minVersion="1.7.3">
 
     <ui width="812" height="375" bgImage="UI/Bare_Bones_XS.png" bgColor="#F2E3D5" layoutMode="relative" bgMode="top_left">
 
