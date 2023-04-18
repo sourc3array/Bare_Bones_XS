@@ -12,7 +12,7 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
 
-<DecentSampler minVersion="1.7.0">
+<DecentSampler minVersion="1.7.3">
 
     <ui width="812" height="375" bgImage="UI/Panels/Panel_Gold_Fusion.png" bgColor="#85754E" layoutMode="relative" bgMode="top_left">
 
