@@ -48,7 +48,7 @@ The UI kit includes all of the [knobs]( /Bare_Bones_XS.dsbundle/UI/Controls/ ), 
  
 ## Compatibility
 
-Bare Bones XS is compatible with Decent Sampler 1.7.0 and above.
+Bare Bones XS is compatible with Decent Sampler 1.7.3 and above.
 
 ***
 
