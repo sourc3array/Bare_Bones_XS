@@ -12,7 +12,7 @@
 
 <?xml version="1.0" encoding="UTF-8"?>
 
-<DecentSampler minVersion="1.7.0">
+<DecentSampler minVersion="1.7.3">
 
     <ui width="812" height="375" bgImage="UI/Panels/Panel_Sonic_Silver.png" bgColor="#757575" layoutMode="relative" bgMode="top_left">
 
