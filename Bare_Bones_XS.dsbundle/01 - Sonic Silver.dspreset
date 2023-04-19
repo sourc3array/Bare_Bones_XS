@@ -26,55 +26,66 @@
 
             <label x="138" y="88" width="72" height="36" text="HI" textSize="18" textColor="FFE5F5DC" />
 
-            <!-- UI 02 :: BUTTON A > LED Switch > High-Pass (Rumble) Filter > ON/OFF -->
+            <!-- UI 02 :: BUTTON A > LED Switch > High-Pass (Rumble) Filter [ON/OFF] -->
 
             <button x="138" y="112" width="72" height="72" style="image" value="0">
+
                 <state name="HI_PASS_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
                     <binding type="effect" level="instrument" position="0" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="15" />
                 </state>
+
                 <state name="HI_PASS_ON" mainImage="UI/Buttons/Toggle_LED_ON_Alien_Armpit.png">
                     <binding type="effect" level="instrument" position="0" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="100" />
                  </state>
+
             </button>
 
             <!-- UI 03 :: LABEL > Button B (LO) -->
 
             <label x="208" y="88" width="72" height="36" text="LO" textSize="18" textColor="FFE5F5DC" />
 
-            <!-- UI 04 :: BUTTON B > LED Switch > Low-Pass (Noise) Filter > ON/OFF -->
+            <!-- UI 04 :: BUTTON B > LED Switch > Low-Pass (Noise) Filter [ON/OFF] -->
 
             <button x="208" y="112" width="72" height="72" style="image" value="0">
-                <state name="LOW_PASS_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
+
+                <state name="LO_PASS_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
                     <binding type="effect" level="instrument" position="1" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="20000" />
                 </state>
-                <state name="LOW_PASS_ON" mainImage="UI/Buttons/Toggle_LED_ON_Alien_Armpit.png">
+
+                <state name="LO_PASS_ON" mainImage="UI/Buttons/Toggle_LED_ON_Alien_Armpit.png">
                     <binding type="effect" level="instrument" position="1" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="12000" />
                 </state>
+
             </button>
 
             <!-- UI 05 :: LABEL > Button C (FX) -->
 
             <label x="529" y="88" width="72" height="36" text="FX" textSize="18" textColor="FFE5F5DC" />
 
-            <!-- UI 06 :: BUTTON C > LED Switch > FX > ON/OFF -->
+            <!-- UI 06 :: BUTTON C > LED Switch > Reverb FX [ON/OFF] -->
 
             <button x="529" y="112" width="72" height="72" style="image" value="1">
+
                 <state name="FX_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
                     <binding type="effect" level="instrument" position="2" parameter="ENABLED" translation="fixed_value" translationValue="false" />
                 </state>
+
                 <state name="FX_ON" mainImage="UI/Buttons/Toggle_LED_ON_Alien_Armpit.png">
                     <binding type="effect" level="instrument" position="2" parameter="ENABLED" translation="fixed_value" translationValue="true" />
                 </state>
+
             </button>
 
             <!-- UI 07 :: LABEL > Knob A (MIX)-->
 
             <label x="644" y="88" width="72" height="36" text="MIX" textSize="18" textColor="FFE5F5DC" />
 
-            <!-- UI 08 :: KNOB A > FX > Mix -->
+            <!-- UI 08 :: KNOB A > Reverb FX [Mix] -->
 
             <control x="587" y="70" width="72" height="72" parameterName="KNOB_A" type="float" minValue="0" maxValue="1" value="0.5" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+
                 <binding type="effect" level="instrument" position="2" parameter="FX_REVERB_WET_LEVEL" translation="linear" translationOutputMin="0.1" translationOutputMax="0.3" />
+
             </control>
 
         </tab>
@@ -108,13 +119,13 @@
 
     <effects>
 
-        <!-- [I] EFFECT 00 :: Hi-Pass (Rumble) Filter -->
+        <!-- [I] FX 00 :: Hi-Pass (Rumble) Filter -->
         <effect type="highpass" resonance="0.3" frequency="15.0" />
 
-        <!-- [I] EFFECT 01 :: Low-Pass (Noise) Filter -->
+        <!-- [I] FX 01 :: Low-Pass (Noise) Filter -->
         <effect type="lowpass" resonance="0.7" frequency="20000" />
 
-        <!-- [I] EFFECT 02 :: Reverb -->
+        <!-- [I] FX 02 :: Reverb -->
         <effect type="reverb" roomSize=".3" damping=".3" />
 
     </effects>

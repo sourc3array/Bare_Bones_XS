@@ -147,7 +147,7 @@
 
     <groups attack="0.01" decay="0.10" sustain="0.50" release="0.10">
 
-        <!-- GROUP 00 :: GEN Synth Bass > Notes SG -->
+        <!-- SOUND GROUP 00 :: GEN Synth Bass > Notes -->
 
         <group ampVelTrack="0.8">
         
@@ -176,7 +176,7 @@
 
         </group>
         
-        <!-- GROUP 01 :: GEN Synth Bass > Sustained SG -->
+        <!-- SOUND GROUP 01 :: GEN Synth Bass > Sustained -->
 
         <group ampVelTrack="0.9" attack="0.05" release="2.00">
         
@@ -198,7 +198,7 @@
 
         </group>
         
-        <!-- GROUP 02 :: Glitch FX > Notes SG -->
+        <!-- SOUND GROUP 02 :: Glitch FX > Notes -->
         
         <group ampVelTrack="1.0" attack="0.10" release="1.50" loCC1="0" hiCC1="63" tags="GLITCH">
         
@@ -224,7 +224,7 @@
 
         </group>
         
-        <!-- GROUP 03 :: Glitch FX > Sustained SG -->
+        <!-- SOUND GROUP 03 :: Glitch FX > Sustained -->
         
         <group ampVelTrack="1.0" attack=".20" release="2.50" loCC1="64" hiCC1="127" tags="SUS_GLITCH">
         
@@ -260,10 +260,10 @@
     
     <effects>
     
-        <!-- [I] > FX 00 :: Hi-Pass Filter -->
+        <!-- [I] FX 00 :: Hi-Pass Filter -->
         <effect type="highpass" resonance="0.3" frequency="15.0" />
         
-        <!-- [I] > FX 01 :: Low-Pass Filter -->
+        <!-- [I] FX 01 :: Low-Pass Filter -->
         <effect type="lowpass" resonance="0.5" frequency="18000" />       
     
     </effects>
@@ -271,6 +271,7 @@
     <midi>
 
         <!-- MIDI CC 20 > UI 01 > Drive [Switch] -->
+        <!-- *** UNTESTED *** --->
         <cc number="20">
             <binding level="ui" type="control" parameter="VALUE" position="1" translation="linear" translationOutputMin="0" translationOutputMax="1" />
         </cc>
@@ -281,6 +282,7 @@
         </cc>
         
         <!-- MIDI CC 22 > UI 03 > Glitch [Switch] -->
+        <!-- *** UNTESTED *** --->
         <cc number="22">
             <binding level="ui" type="control" parameter="VALUE" position="3" translation="linear" translationOutputMin="0" translationOutputMax="1" />
         </cc>
