@@ -1,5 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<!--
+
+    Instrument: Bare Bones XS
+    Preset: Alien Armpit | Version: 1.0.0-Beta.1
+    Designer: Jason Krueger (sourc3array)
+    License: GNU GPL v3.0
+    GitHub: https://github.com/sourc3array/Bare_Bones_XS
+
+    Visit GEN Audio at https://genaudio.biz
+
+-->
+
 <DecentSampler minVersion="1.7.3">
 
     <ui width="812" height="375" bgImage="UI/Panels/Panel_Alien_Armpit.png" bgColor="#F2E3D5" layoutMode="relative" bgMode="top_left">
