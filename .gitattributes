@@ -1,2 +1,2 @@
 $ cat .gitattributes
-Bare_Bones_XS.dsbundle/*.dspreset linguist-language=XML
+/Bare_Bones_XS.dsbundle/*.dspreset linguist-language=XML
