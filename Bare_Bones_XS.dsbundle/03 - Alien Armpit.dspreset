@@ -47,11 +47,11 @@
             
             <!-- UI 04 :: LABEL > Knob B (SUSTAIN) -->
             
-            <label x="319" y="165" width="64" height="36" text="SUSTAIN" textSize="15" textColor="FF333333" />
+            <label x="324" y="70" width="60" height="72" text="SUSTAIN" textSize="15" textColor="FF333333" />
 
             <!-- UI 05 :: KNOB B > Blend Control > Volume [Notes SG] ± [Sustained SG] -->
       
-            <control x="319" y="111" width="64" height="64" 
+            <control x="324" y="120" width="60" height="60" 
             parameterName="SUSTAIN_BLEND" type="float" minValue="0" maxValue="1" value="0.33"
             style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_GAIA.png" customSkinNumFrames="101" customSkinImageOrientation="vertical">
                 <binding type="amp" level="group" position="0" parameter="AMP_VOLUME" translation="linear" translationReversed="true" />
@@ -60,11 +60,11 @@
             
             <!-- UI 06 :: LABEL > Knob C (REVERB) -->
             
-            <label x="541" y="112" width="72" height="72" text="REVERB" textSize="15" textColor="FF333333" />
+            <label x="542" y="112" width="72" height="72" text="REVERB" textSize="15" textColor="FF333333" />
 
             <!-- UI 07 :: KNOB C > Convolution [Mix] -->
       
-            <control x="541" y="70" width="72" height="72" 
+            <control x="542" y="70" width="72" height="72" 
             parameterName="REVERB_MIX" type="float" minValue="0" maxValue="1" value="0.2"
             style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
                 <binding type="effect" level="instrument" position="2" parameter="FX_MIX" translation="linear" />
@@ -138,11 +138,11 @@
             
             <!-- UI 09 :: LABEL > Knob D > Hi-Pass Filter -->
             
-            <label x="277" y="58" width="36" height="36" text="_/" textSize="18" textColor="FF333333" />
+            <label x="414" y="46" width="36" height="36" text="_/‾" textSize="15" textColor="FF333333" />
             
             <!-- UI 10 :: KNOB D > Hi-Pass Filter [Frequency] -->
       
-            <control x="303" y="58" width="36" height="36" 
+            <control x="442" y="46" width="36" height="36" 
             parameterName="HI_PASS" type="float" minValue="0" maxValue="1" value="0.1"
             style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
                 <binding type="effect" level="instrument" position="0" parameter="FX_FILTER_FREQUENCY"
@@ -151,11 +151,11 @@
             
             <!-- UI 11 :: LABEL > Knob E > Low-Pass Filter -->
             
-            <label x="389" y="58" width="36" height="36" text="\_" textSize="18" textColor="FF333333" />
+            <label x="512" y="46" width="36" height="36" text="\_" textSize="15" textColor="FF333333" />
             
             <!-- UI 12 :: KNOB E > Low-Pass Filter [Frequency] -->
       
-            <control x="363" y="58" width="36" height="36" 
+            <control x="484" y="46" width="36" height="36" 
             parameterName="LO_PASS" type="float" minValue="0" maxValue="1" value="0.9"
             style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
                 <binding type="effect" level="instrument" position="1" parameter="FX_FILTER_FREQUENCY"
@@ -164,12 +164,12 @@
             
             <!-- UI 13 :: LABEL > Knob F (ATTACK) -->
             
-            <label x="247" y="142" width="48" height="36" text="ATTACK" textSize="15" textColor="FF333333" />
+            <label x="234" y="148" width="60" height="36" text="ATTACK" textSize="15" textColor="FF333333" />
             
             <!-- UI 14 :: KNOB F > Attack [Notes SG] + [Glitch Notes SG] -->
       
-            <control x="247" y="106" width="48" height="48" 
-            parameterName="ATTACK" type="float" minValue="0" maxValue="1" value="0"
+            <control x="234" y="100" width="60" height="60" 
+            parameterName="ATTACK" type="float" minValue="0" maxValue="1" value=".66"
             style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
                 <binding type="amp" level="group" position="0" parameter="ENV_ATTACK" translation="linear" translationOutputMin="0.00" translationOutputMax="1.00" />
                 <binding type="amp" level="group" position="2" parameter="ENV_ATTACK" translation="linear" translationOutputMin="0.10" translationOutputMax="2.00" />
@@ -177,11 +177,11 @@
             
             <!-- UI 15 :: LABEL > Knob G (RELEASE) -->
             
-            <label x="411" y="142" width="48" height="36" text="RELEASE" textSize="15" textColor="FF333333" />
+            <label x="414" y="148" width="60" height="36" text="RELEASE" textSize="15" textColor="FF333333" />
             
             <!-- UI 16 :: KNOB G > Release [Sustained SG] -->
       
-            <control x="411" y="106" width="48" height="48" 
+            <control x="414" y="100" width="60" height="60" 
             parameterName="RELEASE" type="float" minValue="0" maxValue="1" value="0.7"
             style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
                 <binding type="amp" level="group" position="1" parameter="ENV_RELEASE" translation="linear" translationOutputMin="0.05" translationOutputMax="5" />
@@ -189,7 +189,7 @@
             
             <!-- UI 17 :: BUTTON B > LED Switch > Reverb [ON/OFF] -->
             
-            <button x="493" y="112" width="72" height="72" style="image" value="1">
+            <button x="494" y="112" width="72" height="72" style="image" value="1">
                 <state name="VERB_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
                     <binding type="effect" level="instrument" position="2" parameter="ENABLED" translation="fixed_value" translationValue="false" />
                 </state>
@@ -198,29 +198,47 @@
                 </state>
             </button>
             
-            <!-- UI 18 :: BUTTON X > Utility Switch > Waveshaper (ON/OFF) -->
+            <!-- UI 18 :: KNOB X > Waveshaper [Boost] -->
             
-            <button x="208" y="58" width="36" height="36" style="image" value="1">
-                <state name="VERB_OFF" mainImage="UI/Buttons/Switch_XS_A.png">
+            <control x="204" y="40" width="48" height="48" 
+            parameterName="WAVE_BOOST" type="float" minValue="0" maxValue="1" value="0.05"
+            style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
+                <binding type="effect" level="group" groupIndex="0" effectIndex="0" parameter="FX_DRIVE_BOOST" translation="linear" translationOutputMin="0" translationOutputMax="1" />
+            </control>
+            
+            <!-- UI 19 :: BUTTON X > Utility Switch > Waveshaper (ON/OFF) -->
+            
+            <button x="246" y="46" width="36" height="36" style="image" value="1">
+                <state name="WAVE_OFF" mainImage="UI/Buttons/Switch_XS_A.png">
                     <binding type="effect" level="group" groupIndex="0" effectIndex="0" parameter="ENABLED" translation="fixed_value" translationValue="false" />
                 </state>
-                <state name="VERB_ON" mainImage="UI/Buttons/Switch_XS_B.png">
+                <state name="WAVE_ON" mainImage="UI/Buttons/Switch_XS_B.png">
                     <binding type="effect" level="group" groupIndex="0" effectIndex="0" parameter="ENABLED" translation="fixed_value" translationValue="true" />
                 </state>
             </button>
+            
+            <!-- UI 20 :: LABEL > Knob E > Waveshaper [Boost] -->
+            
+            <label x="276" y="46" width="72" height="36" text="BOOST" textSize="15" hAlign="left" textColor="FF333333" />
 
         </tab>
       
         <keyboard>
         
-            <!-- MIDI C4:B4 -->
-            <color loNote="60" hiNote="83" color="#D1F1A3" />
+            <!-- MIDI C3 -->
+            <color loNote="60" hiNote="60" color="#BEEB7E" />
+
+            <!-- MIDI C#3:B4 -->
+            <color loNote="61" hiNote="83" color="#D1F1A3" />
             
             <!-- MIDI C5 -->
             <color loNote="84" hiNote="84" color="#BEEB7E" />
             
-            <!-- MIDI C#5:C7 -->
-            <color loNote="85" hiNote="108" color="#D1F1A3" />
+            <!-- MIDI C#5:B6 -->
+            <color loNote="85" hiNote="107" color="#D1F1A3" />
+            
+            <!-- MIDI C7 -->
+            <color loNote="108" hiNote="108" color="#BEEB7E" />
 
         </keyboard>
 
@@ -254,7 +272,7 @@
             <effects>
 
                 <!-- [G] 00 [FX] 00 :: WAVE SHAPER -->
-                <effect type="wave_shaper" drive="100" driveBoost="0.1" outputLevel="0.1" />
+                <effect type="wave_shaper" drive="100" outputLevel="0.1" />
 
             </effects>
 
