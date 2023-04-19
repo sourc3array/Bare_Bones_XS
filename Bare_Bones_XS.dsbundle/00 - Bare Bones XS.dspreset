@@ -18,11 +18,11 @@
 
         <tab name="main">
         
-            <!-- UI 00 :: LABEL > Status Line [DISPLAY] -->
+            <!-- UI 00 :: LABEL > Status Line -->
         
             <label x="155" y="91" width="144" height="72" text="" textSize="20" textColor="FFFFFAF6" hAlign="left" />
         
-            <!-- UI 01 :: BUTTON A > LED Switch > Waveshaper [ON/OFF] -->
+            <!-- UI 01 :: BUTTON A > LED Switch > Waveshaper FX (ON/OFF) -->
 
             <button x="407" y="106" width="72" height="72" style="image" value="1">
             
@@ -52,21 +52,21 @@
                  
             </button>
             
-            <!-- UI 02 :: KNOB A > Waveshaper [Drive] -->
+            <!-- UI 02 :: KNOB A > Waveshaper FX [Drive] -->
       
-            <control x="382" y="135" width="48" height="48" parameterName="DRIVE_VOL" type="float" minValue="0" maxValue="1" value="0.5" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
+            <control x="382" y="135" width="48" height="48" parameterName="WAVE_DRIVE" type="float" minValue="0" maxValue="1" value="0.5" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
             
-                <binding type="effect" level="group" groupIndex="0" effectIndex="0"  parameter="FX_DRIVE" translation="linear" translationOutputMin="50" translationOutputMax="300" />
+                <binding type="effect" level="group" groupIndex="0" effectIndex="0" parameter="FX_DRIVE" translation="linear" translationOutputMin="50" translationOutputMax="300" />
                 
-                <binding type="effect" level="group" groupIndex="2" effectIndex="0"  parameter="FX_DRIVE" translation="linear" translationOutputMin="25" translationOutputMax="100" />
+                <binding type="effect" level="group" groupIndex="2" effectIndex="0" parameter="FX_DRIVE" translation="linear" translationOutputMin="25" translationOutputMax="100" />
                 
-                <binding type="effect" level="group" groupIndex="3" effectIndex="0"  parameter="FX_DRIVE" translation="linear" translationOutputMin="25" translationOutputMax="200" />
+                <binding type="effect" level="group" groupIndex="3" effectIndex="0" parameter="FX_DRIVE" translation="linear" translationOutputMin="25" translationOutputMax="200" />
                 
                 <binding type="control" level="ui" position="0" parameter="TEXT" translation="fixed_value" translationValue="DRIVE: SHAPE" />
                 
             </control>
         
-            <!-- UI 03 :: BUTTON B > LED Switch > Glitch FX [ON/OFF] -->
+            <!-- UI 03 :: BUTTON B > LED Switch > Glitch FX (ON/OFF) -->
             
             <button x="510" y="62" width="72" height="72" style="image" value="0">
             
@@ -92,7 +92,7 @@
                 
             </button>
             
-            <!-- UI 04 :: KNOB B > Glitch SGs [VOL] -->
+            <!-- UI 04 :: KNOB B > Glitch Sound Groups [VOL] -->
       
             <control x="485" y="91" width="48" height="48" parameterName="GLITCH_VOL" type="float" minValue="0" maxValue="1" value="0.2" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
             
@@ -104,7 +104,7 @@
                 
             </control>
 
-            <!-- UI 05 :: KNOB C > Sustain SG [VOL] -->
+            <!-- UI 05 :: KNOB C > Sustain Sound Group [VOL] -->
       
             <control x="587" y="30" width="72" height="72" parameterName="SUSTAIN_VOL" type="float" minValue="0" maxValue="1" value="0.33" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical">
             
@@ -127,19 +127,19 @@
         <keyboard>
 
             <!-- MIDI C3 -->
-            <color loNote="60" hiNote="60" color="e0e1e4" />
+            <color loNote="60" hiNote="60" color="E0E1E4" />
             
             <!-- MIDI C#3:B4 -->
-            <color loNote="61" hiNote="83" color="f5f5f6" />
+            <color loNote="61" hiNote="83" color="F5F5F6" />
             
             <!-- MIDI C5 -->
-            <color loNote="84" hiNote="84" color="e0e1e4" />
+            <color loNote="84" hiNote="84" color="E0E1E4" />
             
             <!-- MIDI C#5:B6 -->
-            <color loNote="85" hiNote="107" color="f5f5f6" />
+            <color loNote="85" hiNote="107" color="F5F5F6" />
             
             <!-- MIDI C7 -->
-            <color loNote="108" hiNote="108" color="e0e1e4" />
+            <color loNote="108" hiNote="108" color="E0E1E4" />
 
         </keyboard>
 
@@ -169,7 +169,7 @@
 
             <effects>
 
-                <!-- [G] 00 > FX 00 :: Wave Shaper -->
+                <!-- [G] 00 [FX] 00 :: Wave Shaper -->
                 <effect type="wave_shaper" driveBoost="0.05" outputLevel="0.05" />
 
             </effects>
@@ -210,14 +210,14 @@
                 <!-- GFX-NC5 :: ROUND-ROBIN 02 -->   
                 <sample loNote="72" rootNote="84" hiNote="108" seqMode="random" seqLength="4" seqPosition="2" path="Samples/GEN_Synth_Bass_C5_Glitch_V2.wav" />
 
-                <!-- GFX-NC5 :: ROUND-ROBIN 02 -->    
+                <!-- GFX-NC5 :: ROUND-ROBIN 03 -->    
                 <sample loNote="72" rootNote="84" hiNote="108" seqMode="random" seqLength="4" seqPosition="3" path="Samples/GEN_Synth_Bass_C5_Glitch_V3.wav" />
                 
             <!-- GFX-NOTE C5 :: END -->
             
             <effects>
 
-                <!-- [G] 02 > FX 00 :: Wave Shaper -->
+                <!-- [G] 02 [FX] 00 :: Wave Shaper -->
                 <effect type="wave_shaper" driveBoost="0.05" outputLevel="0.05" />
  
             </effects>
@@ -226,7 +226,7 @@
         
         <!-- SOUND GROUP 03 :: Glitch FX > Sustained -->
         
-        <group ampVelTrack="1.0" attack=".20" release="2.50" loCC1="64" hiCC1="127" tags="SUS_GLITCH">
+        <group ampVelTrack="1.0" attack="0.20" release="2.50" loCC1="64" hiCC1="127" tags="SUS_GLITCH">
         
             <!-- GLITCH-SUSTAIN 01 :: Glitch FX > Sustained C5 -->
             
@@ -249,7 +249,7 @@
 
             <effects>
 
-                <!-- [G] 03 > FX 00 :: Wave Shaper -->
+                <!-- [G] 03 [FX] 00 :: Wave Shaper -->
                 <effect type="wave_shaper" driveBoost="0.10" outputLevel="0.05" />
  
             </effects>
@@ -260,41 +260,54 @@
     
     <effects>
     
-        <!-- [I] FX 00 :: Hi-Pass Filter -->
+        <!-- [I] [FX] 00 :: Hi-Pass Filter -->
         <effect type="highpass" resonance="0.3" frequency="15.0" />
         
-        <!-- [I] FX 01 :: Low-Pass Filter -->
+        <!-- [I] [FX] 01 :: Low-Pass Filter -->
         <effect type="lowpass" resonance="0.5" frequency="18000" />       
     
     </effects>
     
     <midi>
 
-        <!-- MIDI CC 20 > UI 01 > Drive [Switch] -->
-        <!-- *** UNTESTED *** --->
-        <cc number="20">
+        <!-- MIDI CC 20 > UI 01 :: Drive [Switch] -->
+       
+        <cc number="20"><!-- *** UNTESTED *** -->
+
             <binding level="ui" type="control" parameter="VALUE" position="1" translation="linear" translationOutputMin="0" translationOutputMax="1" />
+
         </cc>
         
-        <!-- MIDI CC 01 > UI 02 > Drive [Knob] -->
+        <!-- MIDI CC 01 > UI 02 :: Drive [Knob] -->
+
         <cc number="1">
+
             <binding level="ui" type="control" parameter="VALUE" position="2" translation="linear" translationOutputMin="0" translationOutputMax="1" />
+
         </cc>
         
-        <!-- MIDI CC 22 > UI 03 > Glitch [Switch] -->
-        <!-- *** UNTESTED *** --->
-        <cc number="22">
+        <!-- MIDI CC 22 > UI 03 :: Glitch [Switch] -->
+        
+        <cc number="22"><!-- *** UNTESTED *** -->
+
             <binding level="ui" type="control" parameter="VALUE" position="3" translation="linear" translationOutputMin="0" translationOutputMax="1" />
+
         </cc>
         
-        <!-- MIDI CC 23 > UI 04 > Glitch [Knob] -->
+        <!-- MIDI CC 23 > UI 04 :: Glitch [Knob] -->
+
         <cc number="23">
+
             <binding level="ui" type="control" parameter="VALUE" position="4" translation="linear" translationOutputMin="0" translationOutputMax="1" />
+
         </cc>
         
-        <!-- MIDI CC 64 > UI 05 > Sustain [Knob] -->
+        <!-- MIDI CC 64 > UI 05 :: Sustain [Knob] -->
+
         <cc number="64">
+
             <binding level="ui" type="control" parameter="VALUE" position="5" translation="linear" translationOutputMin="0" translationOutputMax="1" />
+
         </cc>
 
     </midi>
@@ -302,7 +315,7 @@
     <tags>
     
         <tag name="GLITCH" polyphony="3" />    
-        <tag name="SUS_GLITCH" polyphony="3" />
+        <tag name="SUS_GLITCH" polyphony="1" />
     
     </tags>
 

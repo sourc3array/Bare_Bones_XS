@@ -31,11 +31,15 @@
             <button x="138" y="112" width="72" height="72" style="image" value="0">
 
                 <state name="HI_PASS_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
+
                     <binding type="effect" level="instrument" position="0" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="15" />
+
                 </state>
 
                 <state name="HI_PASS_ON" mainImage="UI/Buttons/Toggle_LED_ON_Alien_Armpit.png">
+
                     <binding type="effect" level="instrument" position="0" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="100" />
+
                  </state>
 
             </button>
@@ -49,11 +53,15 @@
             <button x="208" y="112" width="72" height="72" style="image" value="0">
 
                 <state name="LO_PASS_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
+
                     <binding type="effect" level="instrument" position="1" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="20000" />
+
                 </state>
 
                 <state name="LO_PASS_ON" mainImage="UI/Buttons/Toggle_LED_ON_Alien_Armpit.png">
+
                     <binding type="effect" level="instrument" position="1" parameter="FX_FILTER_FREQUENCY" translation="fixed_value" translationValue="12000" />
+
                 </state>
 
             </button>
@@ -67,11 +75,15 @@
             <button x="529" y="112" width="72" height="72" style="image" value="1">
 
                 <state name="FX_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
+
                     <binding type="effect" level="instrument" position="2" parameter="ENABLED" translation="fixed_value" translationValue="false" />
+
                 </state>
 
                 <state name="FX_ON" mainImage="UI/Buttons/Toggle_LED_ON_Alien_Armpit.png">
+
                     <binding type="effect" level="instrument" position="2" parameter="ENABLED" translation="fixed_value" translationValue="true" />
+
                 </state>
 
             </button>
@@ -82,9 +94,9 @@
 
             <!-- UI 08 :: KNOB A > Reverb FX [Mix] -->
 
-            <control x="587" y="70" width="72" height="72" parameterName="KNOB_A" type="float" minValue="0" maxValue="1" value="0.5" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+            <control x="587" y="70" width="72" height="72" parameterName="VERB_MIX" type="float" minValue="0" maxValue="1" value="0.5" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
 
-                <binding type="effect" level="instrument" position="2" parameter="FX_REVERB_WET_LEVEL" translation="linear" translationOutputMin="0.1" translationOutputMax="0.3" />
+                <binding type="effect" level="instrument" position="2" parameter="FX_REVERB_WET_LEVEL" translation="linear" translationOutputMin="0.1" translationOutputMax="0.5" />
 
             </control>
 
@@ -111,7 +123,7 @@
                     <sample loNote="72" rootNote="84" hiNote="108" path="Samples/GEN_Synth_Bass_C5_S0.wav" />
                 <!-- ZONE 01 :: END -->
 
-            <!-- GSB-NC5 :: END -->
+            <!-- GSB-Note C5 :: END -->
 
         </group>
 
@@ -119,14 +131,14 @@
 
     <effects>
 
-        <!-- [I] FX 00 :: Hi-Pass (Rumble) Filter -->
-        <effect type="highpass" resonance="0.3" frequency="15.0" />
+        <!-- [I] [FX] 00 :: Hi-Pass (Rumble) Filter -->
+        <effect type="highpass" resonance="0.5" frequency="15.0" />
 
-        <!-- [I] FX 01 :: Low-Pass (Noise) Filter -->
-        <effect type="lowpass" resonance="0.7" frequency="20000" />
+        <!-- [I] [FX] 01 :: Low-Pass (Noise) Filter -->
+        <effect type="lowpass" resonance="0.5" frequency="20000" />
 
-        <!-- [I] FX 02 :: Reverb -->
-        <effect type="reverb" roomSize=".3" damping=".3" />
+        <!-- [I] [FX] 02 :: Reverb -->
+        <effect type="reverb" roomSize="0.3" damping="0.3" />
 
     </effects>
 

@@ -1,2 +1,2 @@
 $ cat .gitattributes
-*.dspreset linguist-language=XML
+/*.dspreset linguist-language=XML

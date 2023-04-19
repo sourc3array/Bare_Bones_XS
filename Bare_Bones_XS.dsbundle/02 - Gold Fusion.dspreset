@@ -26,71 +26,98 @@
 
             <label x="160" y="112" width="48" height="72" text="DRIVE" textSize="18" textColor="FFFAF9F4" />
 
-            <!-- UI 02 :: BUTTON A > LED Switch > Drive > ON/OFF -->
+            <!-- UI 02 :: BUTTON A > LED Switch > Drive (ON/OFF) -->
 
             <button x="208" y="112" width="72" height="72" style="image" value="1">
-                <state name="SWITCH_A_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
+
+                <state name="DRIVE_OFF" mainImage="UI/Buttons/Toggle_LED_OFF_Sonic_Silver.png">
+
                     <binding type="effect" level="group" groupIndex="0" effectIndex="0" parameter="ENABLED" translation="fixed_value" translationValue="false" />
+
                 </state>
-                <state name="SWITCH_A_ON" mainImage="UI/Buttons/Toggle_LED_ON_Alien_Armpit.png">
+
+                <state name="DRIVE_ON" mainImage="UI/Buttons/Toggle_LED_ON_Alien_Armpit.png">
+
                     <binding type="effect" level="group" groupIndex="0" effectIndex="0" parameter="ENABLED" translation="fixed_value" translationValue="true" />
+
                  </state>
+
             </button>
 
-            <!-- UI 03 :: KNOB A > Drive Mix > Sound Group A -->
+            <!-- UI 03 :: KNOB A > Waveshaper FX [Drive] -->
 
-            <control x="160" y="82" width="48" height="48" parameterName="KNOB_A" type="float" minValue="0" maxValue="1" value="0.1" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
-                <binding type="effect" level="group" groupIndex="0" effectIndex="0"  parameter="FX_DRIVE" translation="linear" translationOutputMin="1" translationOutputMax="1000" />
+            <control x="160" y="82" width="48" height="48" parameterName="WAVE_DRIVE" type="float" minValue="0" maxValue="1" value="0.1" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+
+                <binding type="effect" level="group" groupIndex="0" effectIndex="0" parameter="FX_DRIVE" translation="linear" translationOutputMin="1" translationOutputMax="1000" />
+
             </control>
 
             <!-- UI 04 :: LABEL > Knob B (A) -->
 
             <label x="322" y="112" width="72" height="72" text="A" textSize="18" textColor="FFFAF9F4" />
 
-            <!-- UI 05 :: KNOB B > Sound Group A > VOL -->
+            <!-- UI 05 :: KNOB B > Sound Group A [VOL] -->
 
-            <control x="322" y="70" width="72" height="72" parameterName="KNOB_B" type="float" minValue="0" maxValue="1" value="0.33" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+            <control x="322" y="70" width="72" height="72" parameterName="GROUP_A" type="float" minValue="0" maxValue="1" value="0.33" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+
                 <binding type="amp" level="group" position="0" parameter="AMP_VOLUME" translation="linear" translationOutputMin="0.0" translationOutputMax="1.0" />
+
             </control>
 
             <!-- UI 06 :: LABEL > Knob C (B) -->
 
             <label x="436" y="112" width="72" height="72" text="B" textSize="18" textColor="FFFAF9F4" />
 
-            <!-- UI 07 :: KNOB C > Sound Group B > VOL -->
+            <!-- UI 07 :: KNOB C > Sound Group B [VOL] -->
 
-            <control x="436" y="70" width="72" height="72" parameterName="KNOB_C" type="float" minValue="0" maxValue="1" value="0.66" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+            <control x="436" y="70" width="72" height="72" parameterName="GROUP_B" type="float" minValue="0" maxValue="1" value="0.66" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+
                 <binding type="amp" level="group" position="1" parameter="AMP_VOLUME" translation="linear" translationOutputMin="0.0" translationOutputMax="1.0" />
+
             </control>
 
             <!-- UI 08 :: LABEL > Button B (FX) -->
 
             <label x="550" y="112" width="36" height="72" text="FX:" textSize="18" textColor="FFFAF9F4" />
 
-            <!-- UI 09 :: BUTTON B > Utility Switch > FX > Reverb / Chorus -->
+            <!-- UI 09 :: BUTTON B > Utility Switch [Reverb] / [Chorus] -->
 
             <button x="550" y="88" width="36" height="36" style="image" value="1">
+
                 <state name="FX_REVERB" mainImage="UI/Buttons/Switch_XS_A.png">
+
                     <binding type="effect" level="instrument" position="2" parameter="ENABLED" translation="fixed_value" translationValue="true" />
+
                     <binding type="effect" level="instrument" position="3" parameter="ENABLED" translation="fixed_value" translationValue="false" />
+
                     <binding type="control" level="ui" position="10" parameter="TEXT" translation="fixed_value" translationValue="REVERB" />
+
                 </state>
+
                 <state name="FX_CHORUS" mainImage="UI/Buttons/Switch_XS_B.png">
+
                     <binding type="effect" level="instrument" position="2" parameter="ENABLED" translation="fixed_value" translationValue="false" />
+
                     <binding type="effect" level="instrument" position="3" parameter="ENABLED" translation="fixed_value" translationValue="true" />
+
                     <binding type="control" level="ui" position="10" parameter="TEXT" translation="fixed_value" translationValue="CHORUS" />
+
                  </state>
+
             </button>
 
             <!-- UI 10 :: LABEL > Knob C (MIX) -->
 
             <label x="587" y="112" width="72" height="72" text="MIX" textSize="18" textColor="FFFAF9F4" />
 
-            <!-- UI 11 :: KNOB C > FX Mix [Reverb + Chorus] -->
+            <!-- UI 11 :: KNOB C > FX Mix [Reverb] + [Chorus] -->
 
             <control x="587" y="70" width="72" height="72" parameterName="KNOB_C" type="float" minValue="0" maxValue="1" value="0.3" style="custom_skin_vertical_drag" customSkinImage="UI/Controls/Knob_ENIGMA.png" customSkinNumFrames="128" customSkinImageOrientation="vertical" mouseDragSensitivity="100">
+
                 <binding type="effect" level="instrument" position="2" parameter="FX_REVERB_WET_LEVEL" translation="linear" translationOutputMin="0" translationOutputMax="0.5" />
+
                 <binding type="effect" level="instrument" position="3" parameter="FX_MIX" translation="linear" translationOutputMin="0" translationOutputMax="1" />
+
             </control>
 
         </tab>
@@ -130,13 +157,13 @@
                     <sample loNote="72" rootNote="84" hiNote="108" loVel="95" hivel="127" path="Samples/GEN_Synth_Bass_C5_S2.wav" />
                 <!-- ZONE 03 :: END -->
 
-            <!-- GSB-NC5 :: END -->
+            <!-- GSB-NOTE C5 :: END -->
 
             <!-- GROUP FX -->
 
             <effects>
 
-                <!-- [G0] FX 00 :: WAVE SHAPER -->
+                <!-- [G] 00 [FX] 00 :: WAVE SHAPER -->
                 <effect type="wave_shaper" driveBoost="0.1" outputLevel="0.1" />
 
             </effects>
@@ -161,7 +188,7 @@
                     <sample loNote="72" rootNote="84" hiNote="108" loVel="95" hivel="127" path="Samples/GEN_Synth_Bass_C5_SUS_S2.wav" />
                 <!-- ZONE 03 :: END -->
 
-            <!-- GSB-SC5 :: END -->
+            <!-- GSB-SUSTAIN C5 :: END -->
 
         </group>
 
@@ -176,7 +203,7 @@
         <effect type="lowpass" resonance="0.7" frequency="20000" />
 
         <!-- [I] FX 02 :: Reverb -->
-        <effect type="reverb" roomSize=".3" damping=".3" />
+        <effect type="reverb" roomSize="0.3" damping="0.3" />
 
         <!-- [I] FX 03 :: Chorus -->
         <effect type="chorus" modDepth="0.3" modRate="0.3" />
