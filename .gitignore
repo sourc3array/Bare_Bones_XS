@@ -1,8 +1,0 @@
-# Ignore workflows directory
-*/workflows
-
-# Ignore all .yml (workflow) files
-*.yml
-
-# Ignore Docs (online assets) directory
-Docs
